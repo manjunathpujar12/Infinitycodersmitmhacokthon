@@ -593,7 +593,7 @@ export const CandidateAuthProvider: React.FC<{ children: ReactNode }> = ({ child
   };
 
   const resetToDefaultSeedData = () => {
-    localStorage.clear();
+    // Preserve Supabase Auth session and credentials; only reset in-memory preview data.
     setCandidate(INITIAL_CANDIDATE);
     setAlternativeOffer(SEED_ALTERNATIVE_OFFER);
     setSlots(SEED_SLOTS);
