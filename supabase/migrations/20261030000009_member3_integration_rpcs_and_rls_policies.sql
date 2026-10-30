@@ -50,6 +50,54 @@ CREATE POLICY "storage_receipts_delete" ON storage.objects
 -- 2. COMPLETE MISSING RLS POLICIES FOR ALL ROLES
 -- ============================================================================
 
+-- Create candidate_allocations before earlier profile policies reference it.
+-- ----------------------------------------------------------------------------
+-- 2.9. CANDIDATE ALLOCATIONS TABLE & RLS POLICIES
+-- ----------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS public.candidate_allocations (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    candidate_id UUID NOT NULL REFERENCES public.profiles(id) ON DELETE CASCADE,
+    job_opening_id UUID NOT NULL REFERENCES public.job_openings(id) ON DELETE CASCADE,
+    location_id UUID NOT NULL REFERENCES public.locations(id) ON DELETE CASCADE,
+    status VARCHAR(32) NOT NULL DEFAULT 'allocated' CHECK (status IN ('allocated', 'overflow', 'declined', 'cancelled')),
+    is_overflow BOOLEAN NOT NULL DEFAULT FALSE,
+    allocated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+    allocated_by UUID REFERENCES public.profiles(id) ON DELETE SET NULL,
+    metadata JSONB NOT NULL DEFAULT '{}'::jsonb,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+    CONSTRAINT uq_candidate_job_allocation UNIQUE (candidate_id, job_opening_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_candidate_allocations_lookup 
+    ON public.candidate_allocations(job_opening_id, location_id, status);
+CREATE INDEX IF NOT EXISTS idx_candidate_allocations_candidate 
+    ON public.candidate_allocations(candidate_id);
+
+ALTER TABLE public.candidate_allocations ENABLE ROW LEVEL SECURITY;
+
+DROP POLICY IF EXISTS "candidate_allocations_select" ON public.candidate_allocations;
+CREATE POLICY "candidate_allocations_select" ON public.candidate_allocations
+    FOR SELECT USING (
+        candidate_id = auth.uid()
+        OR public.get_current_user_role() = 'admin'
+        OR EXISTS (
+            SELECT 1 FROM public.job_openings j
+            WHERE j.id = candidate_allocations.job_opening_id
+              AND public.has_hr_permission(j.company_id, candidate_allocations.location_id)
+        )
+    );
+
+DROP POLICY IF EXISTS "candidate_allocations_modify_hr" ON public.candidate_allocations;
+DROP POLICY IF EXISTS "candidate_allocations_modify_admin" ON public.candidate_allocations;
+CREATE POLICY "candidate_allocations_modify_admin" ON public.candidate_allocations
+    FOR ALL USING (
+        public.get_current_user_role() = 'admin'
+    );
+
+
+
+
 -- ----------------------------------------------------------------------------
 -- 2.1. PROFILES POLICIES (Admin Insert/Delete & HR Candidate Updates)
 -- ----------------------------------------------------------------------------
@@ -328,51 +376,6 @@ DROP POLICY IF EXISTS "audit_logs_insert_admin" ON public.audit_logs;
 CREATE POLICY "audit_logs_insert_admin" ON public.audit_logs
     FOR INSERT TO authenticated
     WITH CHECK (public.get_current_user_role() = 'admin');
-
--- ----------------------------------------------------------------------------
--- 2.9. CANDIDATE ALLOCATIONS TABLE & RLS POLICIES
--- ----------------------------------------------------------------------------
-CREATE TABLE IF NOT EXISTS public.candidate_allocations (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    candidate_id UUID NOT NULL REFERENCES public.profiles(id) ON DELETE CASCADE,
-    job_opening_id UUID NOT NULL REFERENCES public.job_openings(id) ON DELETE CASCADE,
-    location_id UUID NOT NULL REFERENCES public.locations(id) ON DELETE CASCADE,
-    status VARCHAR(32) NOT NULL DEFAULT 'allocated' CHECK (status IN ('allocated', 'overflow', 'declined', 'cancelled')),
-    is_overflow BOOLEAN NOT NULL DEFAULT FALSE,
-    allocated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-    allocated_by UUID REFERENCES public.profiles(id) ON DELETE SET NULL,
-    metadata JSONB NOT NULL DEFAULT '{}'::jsonb,
-    created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-    updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-    CONSTRAINT uq_candidate_job_allocation UNIQUE (candidate_id, job_opening_id)
-);
-
-CREATE INDEX IF NOT EXISTS idx_candidate_allocations_lookup 
-    ON public.candidate_allocations(job_opening_id, location_id, status);
-CREATE INDEX IF NOT EXISTS idx_candidate_allocations_candidate 
-    ON public.candidate_allocations(candidate_id);
-
-ALTER TABLE public.candidate_allocations ENABLE ROW LEVEL SECURITY;
-
-DROP POLICY IF EXISTS "candidate_allocations_select" ON public.candidate_allocations;
-CREATE POLICY "candidate_allocations_select" ON public.candidate_allocations
-    FOR SELECT USING (
-        candidate_id = auth.uid()
-        OR public.get_current_user_role() = 'admin'
-        OR EXISTS (
-            SELECT 1 FROM public.job_openings j
-            WHERE j.id = candidate_allocations.job_opening_id
-              AND public.has_hr_permission(j.company_id, candidate_allocations.location_id)
-        )
-    );
-
-DROP POLICY IF EXISTS "candidate_allocations_modify_hr" ON public.candidate_allocations;
-DROP POLICY IF EXISTS "candidate_allocations_modify_admin" ON public.candidate_allocations;
-CREATE POLICY "candidate_allocations_modify_admin" ON public.candidate_allocations
-    FOR ALL USING (
-        public.get_current_user_role() = 'admin'
-    );
-
 
 -- ============================================================================
 -- 3. INTEGRATION RPC 1: allocate_candidate
