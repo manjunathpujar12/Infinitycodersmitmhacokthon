@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useCandidateAuth } from '../../context/CandidateAuthContext';
-import { Layers, ShieldCheck, ArrowRight, Lock, Mail, User, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Layers, ShieldCheck, ArrowRight, Lock, Mail, User } from 'lucide-react';
 
 export const AuthPage: React.FC = () => {
   const { login, register, loading } = useCandidateAuth();
@@ -42,12 +42,6 @@ export const AuthPage: React.FC = () => {
       const res = await login(email, password);
       if (!res.success) setFormError(res.message);
     }
-  };
-
-  const handleDemoFill = () => {
-    setEmail('priya.sundaram@outlook.com');
-    setPassword('PriyaSecure2026!');
-    setFullName('Priya Sundaram');
   };
 
   return (
@@ -196,17 +190,6 @@ export const AuthPage: React.FC = () => {
             </button>
           </form>
 
-          {/* Quick Demo Pre-fill helper */}
-          <div className="pt-4 border-t border-borderMuted flex items-center justify-between text-xs">
-            <span className="text-textMuted">Testing preview?</span>
-            <button
-              type="button"
-              onClick={handleDemoFill}
-              className="text-primary font-bold hover:underline flex items-center gap-1"
-            >
-              <Sparkles className="w-3.5 h-3.5 text-secondary" /> Fill Demo Credentials
-            </button>
-          </div>
         </div>
 
         {/* Security footnote */}
