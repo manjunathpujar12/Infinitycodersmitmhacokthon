@@ -1,0 +1,406 @@
+attendance_id,interview_id,candidate_id,experience_level,attendance_status,absence_reason,justification_status,policy_action,recorded_by
+ATT00001,INT00001,CAND0001,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00002,INT00002,CAND0002,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00003,INT00003,CAND0003,4 years,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00004,INT00004,CAND0004,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00005,INT00005,CAND0005,2 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00006,INT00006,CAND0006,1 years,Absent,No response,Pending,Review Justification,HR_ADMIN_01
+ATT00007,INT00007,CAND0007,4 years,Absent,Personal emergency,Pending,Review Justification,HR_ADMIN_01
+ATT00008,INT00008,CAND0008,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00009,INT00009,CAND0009,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00010,INT00010,CAND0010,3 years,Absent,Travel disruption,Submitted,Review Justification,HR_ADMIN_01
+ATT00011,INT00011,CAND0011,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00013,INT00013,CAND0013,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00014,INT00014,CAND0014,4 years,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00015,INT00015,CAND0015,2 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00016,INT00016,CAND0016,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00017,INT00017,CAND0017,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00018,INT00018,CAND0018,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00019,INT00019,CAND0019,2 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00021,INT00021,CAND0021,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00022,INT00022,CAND0022,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00023,INT00023,CAND0023,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00025,INT00025,CAND0025,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00026,INT00026,CAND0026,1 years,Absent,Other,Rejected,Review Justification,HR_ADMIN_01
+ATT00027,INT00027,CAND0027,2 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00028,INT00028,CAND0028,4 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00029,INT00029,CAND0029,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00031,INT00031,CAND0031,4 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00032,INT00032,CAND0032,Fresher,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00033,INT00033,CAND0033,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00034,INT00034,CAND0034,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00035,INT00035,CAND0035,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00036,INT00036,CAND0036,3 years,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00037,INT00037,CAND0037,2 years,Absent,Medical emergency,Pending,Review Justification,HR_ADMIN_01
+ATT00038,INT00038,CAND0038,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00039,INT00039,CAND0039,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00040,INT00040,CAND0040,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00042,INT00042,CAND0043,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00043,INT00043,CAND0044,2 years,Absent,No response,Pending,Review Justification,HR_ADMIN_01
+ATT00044,INT00044,CAND0045,Fresher,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00046,INT00046,CAND0047,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00049,INT00049,CAND0050,2 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00050,INT00050,CAND0051,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00051,INT00051,CAND0052,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00052,INT00052,CAND0053,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00053,INT00053,CAND0056,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00054,INT00054,CAND0057,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00056,INT00056,CAND0059,Fresher,Absent,Other,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00057,INT00057,CAND0060,Fresher,Absent,Personal emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00058,INT00058,CAND0061,1 years,Absent,No response,Pending,Review Justification,HR_ADMIN_01
+ATT00059,INT00059,CAND0062,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00060,INT00060,CAND0063,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00062,INT00062,CAND0065,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00063,INT00063,CAND0066,Fresher,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00064,INT00064,CAND0067,4 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00065,INT00065,CAND0068,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00066,INT00066,CAND0070,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00067,INT00067,CAND0071,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00068,INT00068,CAND0072,Fresher,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00069,INT00069,CAND0073,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00070,INT00070,CAND0074,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00071,INT00071,CAND0075,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00072,INT00072,CAND0076,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00073,INT00073,CAND0077,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00074,INT00074,CAND0078,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00075,INT00075,CAND0079,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00076,INT00076,CAND0080,Fresher,Absent,No response,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00077,INT00077,CAND0081,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00078,INT00078,CAND0082,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00079,INT00079,CAND0083,4 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00080,INT00080,CAND0084,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00081,INT00081,CAND0085,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00082,INT00082,CAND0086,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00083,INT00083,CAND0087,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00084,INT00084,CAND0088,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00085,INT00085,CAND0089,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00086,INT00086,CAND0090,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00088,INT00088,CAND0092,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00090,INT00090,CAND0095,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00091,INT00091,CAND0096,Fresher,Absent,Medical emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00092,INT00092,CAND0097,Fresher,Absent,Other,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00093,INT00093,CAND0098,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00094,INT00094,CAND0099,Fresher,Absent,Personal emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00095,INT00095,CAND0100,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00096,INT00096,CAND0101,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00097,INT00097,CAND0102,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00098,INT00098,CAND0103,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00099,INT00099,CAND0104,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00100,INT00100,CAND0105,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00101,INT00101,CAND0106,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00102,INT00102,CAND0107,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00103,INT00103,CAND0108,1 years,Absent,Travel disruption,Rejected,Review Justification,HR_ADMIN_01
+ATT00104,INT00104,CAND0109,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00105,INT00105,CAND0110,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00109,INT00109,CAND0114,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00110,INT00110,CAND0115,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00111,INT00111,CAND0116,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00112,INT00112,CAND0117,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00113,INT00113,CAND0118,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00114,INT00114,CAND0119,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00115,INT00115,CAND0120,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00116,INT00116,CAND0121,2 years,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00119,INT00119,CAND0125,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00120,INT00120,CAND0126,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00121,INT00121,CAND0127,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00122,INT00122,CAND0128,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00123,INT00123,CAND0129,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00124,INT00124,CAND0130,2 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00125,INT00125,CAND0131,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00126,INT00126,CAND0132,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00127,INT00127,CAND0133,Fresher,Absent,Medical emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00128,INT00128,CAND0134,4 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00129,INT00129,CAND0135,3 years,Absent,Other,Rejected,Review Justification,HR_ADMIN_01
+ATT00130,INT00130,CAND0136,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00131,INT00131,CAND0137,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00132,INT00132,CAND0138,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00133,INT00133,CAND0139,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00134,INT00134,CAND0140,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00135,INT00135,CAND0142,Fresher,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00136,INT00136,CAND0143,Fresher,Absent,Medical emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00137,INT00137,CAND0144,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00138,INT00138,CAND0146,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00139,INT00139,CAND0147,Fresher,Absent,Medical emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00140,INT00140,CAND0148,Fresher,Absent,Personal emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00141,INT00141,CAND0149,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00142,INT00142,CAND0150,Fresher,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00143,INT00143,CAND0151,5 years,Absent,Medical emergency,Submitted,Review Justification,HR_ADMIN_01
+ATT00144,INT00144,CAND0152,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00145,INT00145,CAND0153,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00146,INT00146,CAND0154,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00147,INT00147,CAND0156,Fresher,Absent,Other,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00148,INT00148,CAND0157,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00149,INT00149,CAND0158,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00150,INT00150,CAND0159,Fresher,Absent,Medical emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00151,INT00151,CAND0160,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00152,INT00152,CAND0161,2 years,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00154,INT00154,CAND0163,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00155,INT00155,CAND0164,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00156,INT00156,CAND0165,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00157,INT00157,CAND0166,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00158,INT00158,CAND0167,2 years,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00159,INT00159,CAND0168,Fresher,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00160,INT00160,CAND0169,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00161,INT00161,CAND0170,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00164,INT00164,CAND0173,2 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00165,INT00165,CAND0174,4 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00166,INT00166,CAND0175,Fresher,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00167,INT00167,CAND0176,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00169,INT00169,CAND0178,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00170,INT00170,CAND0179,4 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00171,INT00171,CAND0180,Fresher,Absent,Personal emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00172,INT00172,CAND0181,2 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00173,INT00173,CAND0182,Fresher,Absent,Personal emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00174,INT00174,CAND0183,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00175,INT00175,CAND0184,2 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00176,INT00176,CAND0185,Fresher,Absent,Personal emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00178,INT00178,CAND0187,Fresher,Absent,No response,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00181,INT00181,CAND0190,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00182,INT00182,CAND0191,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00183,INT00183,CAND0192,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00184,INT00184,CAND0193,5 years,Absent,Medical emergency,Pending,Review Justification,HR_ADMIN_01
+ATT00185,INT00185,CAND0194,4 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00186,INT00186,CAND0195,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00187,INT00187,CAND0196,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00188,INT00188,CAND0197,Fresher,Absent,Personal emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00189,INT00189,CAND0198,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00190,INT00190,CAND0199,Fresher,Absent,Travel disruption,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00191,INT00191,CAND0200,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00192,INT00192,CAND0201,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00193,INT00193,CAND0202,Fresher,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00194,INT00194,CAND0203,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00195,INT00195,CAND0204,Fresher,Absent,Other,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00197,INT00197,CAND0206,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00198,INT00198,CAND0207,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00199,INT00199,CAND0208,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00200,INT00200,CAND0209,Fresher,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00201,INT00201,CAND0212,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00202,INT00202,CAND0213,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00203,INT00203,CAND0214,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00205,INT00205,CAND0216,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00207,INT00207,CAND0218,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00208,INT00208,CAND0219,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00209,INT00209,CAND0220,3 years,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00210,INT00210,CAND0221,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00211,INT00211,CAND0222,Fresher,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00212,INT00212,CAND0223,1 years,Absent,Medical emergency,Pending,Review Justification,HR_ADMIN_01
+ATT00213,INT00213,CAND0224,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00214,INT00214,CAND0226,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00215,INT00215,CAND0227,Fresher,Absent,Other,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00217,INT00217,CAND0229,Fresher,Absent,Other,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00218,INT00218,CAND0230,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00219,INT00219,CAND0232,4 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00220,INT00220,CAND0233,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00223,INT00223,CAND0236,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00224,INT00224,CAND0237,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00225,INT00225,CAND0238,Fresher,Absent,Medical emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00226,INT00226,CAND0240,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00227,INT00227,CAND0241,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00228,INT00228,CAND0242,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00229,INT00229,CAND0243,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00230,INT00230,CAND0244,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00232,INT00232,CAND0247,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00233,INT00233,CAND0249,Fresher,Absent,Other,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00234,INT00234,CAND0250,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00235,INT00235,CAND0251,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00236,INT00236,CAND0252,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00238,INT00238,CAND0254,4 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00239,INT00239,CAND0255,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00240,INT00240,CAND0256,Fresher,Absent,Other,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00241,INT00241,CAND0257,4 years,Absent,Travel disruption,Pending,Review Justification,HR_ADMIN_01
+ATT00243,INT00243,CAND0259,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00244,INT00244,CAND0260,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00245,INT00245,CAND0261,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00246,INT00246,CAND0262,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00248,INT00248,CAND0266,4 years,Absent,Travel disruption,Pending,Review Justification,HR_ADMIN_01
+ATT00249,INT00249,CAND0267,Fresher,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00250,INT00250,CAND0268,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00251,INT00251,CAND0269,Fresher,Absent,Travel disruption,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00252,INT00252,CAND0270,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00253,INT00253,CAND0271,Fresher,Absent,No response,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00254,INT00254,CAND0272,Fresher,Absent,Medical emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00255,INT00255,CAND0273,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00256,INT00256,CAND0274,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00257,INT00257,CAND0275,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00258,INT00258,CAND0276,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00259,INT00259,CAND0277,Fresher,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00260,INT00260,CAND0278,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00261,INT00261,CAND0279,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00262,INT00262,CAND0281,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00265,INT00265,CAND0284,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00266,INT00266,CAND0285,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00267,INT00267,CAND0286,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00268,INT00268,CAND0287,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00270,INT00270,CAND0289,4 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00271,INT00271,CAND0290,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00272,INT00272,CAND0291,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00273,INT00273,CAND0292,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00274,INT00274,CAND0293,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00275,INT00275,CAND0294,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00278,INT00278,CAND0297,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00279,INT00279,CAND0298,Fresher,Absent,Other,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00280,INT00280,CAND0299,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00281,INT00281,CAND0300,5 years,Absent,Travel disruption,Rejected,Review Justification,HR_ADMIN_01
+ATT00283,INT00283,CAND0302,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00284,INT00284,CAND0303,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00285,INT00285,CAND0304,Fresher,Absent,Other,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00287,INT00287,CAND0306,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00288,INT00288,CAND0307,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00289,INT00289,CAND0308,2 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00290,INT00290,CAND0309,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00292,INT00292,CAND0311,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00293,INT00293,CAND0312,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00294,INT00294,CAND0313,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00296,INT00296,CAND0315,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00297,INT00297,CAND0316,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00298,INT00298,CAND0317,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00299,INT00299,CAND0318,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00301,INT00301,CAND0320,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00302,INT00302,CAND0321,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00303,INT00303,CAND0322,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00304,INT00304,CAND0325,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00305,INT00305,CAND0326,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00306,INT00306,CAND0327,3 years,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00307,INT00307,CAND0328,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00308,INT00308,CAND0329,4 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00309,INT00309,CAND0330,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00310,INT00310,CAND0331,4 years,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00311,INT00311,CAND0332,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00312,INT00312,CAND0333,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00313,INT00313,CAND0334,4 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00314,INT00314,CAND0335,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00315,INT00315,CAND0336,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00318,INT00318,CAND0339,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00319,INT00319,CAND0340,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00320,INT00320,CAND0341,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00321,INT00321,CAND0343,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00322,INT00322,CAND0344,3 years,Absent,No response,Submitted,Review Justification,HR_ADMIN_01
+ATT00323,INT00323,CAND0345,Fresher,Absent,Personal emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00324,INT00324,CAND0346,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00325,INT00325,CAND0347,2 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00326,INT00326,CAND0348,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00327,INT00327,CAND0349,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00328,INT00328,CAND0350,Fresher,Absent,Personal emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00329,INT00329,CAND0351,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00330,INT00330,CAND0352,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00331,INT00331,CAND0353,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00332,INT00332,CAND0355,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00333,INT00333,CAND0356,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00334,INT00334,CAND0357,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00335,INT00335,CAND0358,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00336,INT00336,CAND0360,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00337,INT00337,CAND0361,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00338,INT00338,CAND0362,4 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00339,INT00339,CAND0363,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00340,INT00340,CAND0364,1 years,Absent,Other,Rejected,Review Justification,HR_ADMIN_01
+ATT00341,INT00341,CAND0365,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00342,INT00342,CAND0367,2 years,Absent,Personal emergency,Rejected,Review Justification,HR_ADMIN_01
+ATT00344,INT00344,CAND0369,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00345,INT00345,CAND0370,Fresher,Absent,Medical emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00346,INT00346,CAND0371,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00347,INT00347,CAND0372,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00348,INT00348,CAND0374,3 years,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00349,INT00349,CAND0375,5 years,Absent,Travel disruption,Pending,Review Justification,HR_ADMIN_01
+ATT00350,INT00350,CAND0376,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00351,INT00351,CAND0377,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00352,INT00352,CAND0379,Fresher,Absent,Medical emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00355,INT00355,CAND0383,2 years,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00356,INT00356,CAND0384,Fresher,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00357,INT00357,CAND0385,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00358,INT00358,CAND0386,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00359,INT00359,CAND0387,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00360,INT00360,CAND0388,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00361,INT00361,CAND0389,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00362,INT00362,CAND0390,Fresher,Absent,No response,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00363,INT00363,CAND0391,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00364,INT00364,CAND0392,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00366,INT00366,CAND0394,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00367,INT00367,CAND0395,Fresher,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00368,INT00368,CAND0396,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00369,INT00369,CAND0397,3 years,Absent,No response,Submitted,Review Justification,HR_ADMIN_01
+ATT00370,INT00370,CAND0398,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00371,INT00371,CAND0399,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00373,INT00373,CAND0401,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00375,INT00375,CAND0403,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00377,INT00377,CAND0406,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00378,INT00378,CAND0407,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00379,INT00379,CAND0408,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00380,INT00380,CAND0409,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00381,INT00381,CAND0410,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00382,INT00382,CAND0411,1 years,Absent,No response,Rejected,Review Justification,HR_ADMIN_01
+ATT00383,INT00383,CAND0412,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00384,INT00384,CAND0413,Fresher,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00385,INT00385,CAND0414,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00386,INT00386,CAND0415,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00387,INT00387,CAND0416,Fresher,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00388,INT00388,CAND0417,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00389,INT00389,CAND0418,4 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00390,INT00390,CAND0419,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00391,INT00391,CAND0420,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00392,INT00392,CAND0421,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00393,INT00393,CAND0422,1 years,Absent,Personal emergency,Rejected,Review Justification,HR_ADMIN_01
+ATT00394,INT00394,CAND0424,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00395,INT00395,CAND0425,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00396,INT00396,CAND0426,Fresher,Absent,Personal emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00397,INT00397,CAND0427,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00398,INT00398,CAND0428,Fresher,Absent,Other,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00399,INT00399,CAND0429,2 years,Absent,No response,Pending,Review Justification,HR_ADMIN_01
+ATT00400,INT00400,CAND0430,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00401,INT00401,CAND0431,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00402,INT00402,CAND0432,4 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00403,INT00403,CAND0433,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00404,INT00404,CAND0434,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00405,INT00405,CAND0435,Fresher,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00406,INT00406,CAND0436,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00407,INT00407,CAND0438,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00409,INT00409,CAND0440,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00410,INT00410,CAND0441,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00411,INT00411,CAND0442,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00413,INT00413,CAND0445,Fresher,Absent,Personal emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00414,INT00414,CAND0446,4 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00415,INT00415,CAND0447,4 years,Absent,Medical emergency,Pending,Review Justification,HR_ADMIN_01
+ATT00416,INT00416,CAND0448,Fresher,Absent,Other,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00418,INT00418,CAND0450,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00419,INT00419,CAND0451,4 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00420,INT00420,CAND0452,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00421,INT00421,CAND0453,Fresher,Absent,Personal emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00422,INT00422,CAND0454,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00423,INT00423,CAND0455,Fresher,Absent,Personal emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00424,INT00424,CAND0456,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00425,INT00425,CAND0457,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00427,INT00427,CAND0459,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00428,INT00428,CAND0460,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00429,INT00429,CAND0461,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00430,INT00430,CAND0462,2 years,Absent,Other,Rejected,Review Justification,HR_ADMIN_01
+ATT00431,INT00431,CAND0463,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00432,INT00432,CAND0464,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00433,INT00433,CAND0465,Fresher,Absent,Other,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00434,INT00434,CAND0466,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00435,INT00435,CAND0467,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00436,INT00436,CAND0468,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00437,INT00437,CAND0469,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00438,INT00438,CAND0471,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00439,INT00439,CAND0472,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00440,INT00440,CAND0473,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00441,INT00441,CAND0474,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00442,INT00442,CAND0475,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00443,INT00443,CAND0476,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00444,INT00444,CAND0477,4 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00445,INT00445,CAND0478,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00446,INT00446,CAND0481,Fresher,Absent,Medical emergency,Not Required,Opportunity Lost,HR_ADMIN_01
+ATT00447,INT00447,CAND0482,1 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00448,INT00448,CAND0483,5 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00449,INT00449,CAND0484,2 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00450,INT00450,CAND0485,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00451,INT00451,CAND0486,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00452,INT00452,CAND0487,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00453,INT00453,CAND0488,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00454,INT00454,CAND0489,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00455,INT00455,CAND0490,2 years,Absent,Medical emergency,Rejected,Review Justification,HR_ADMIN_01
+ATT00456,INT00456,CAND0491,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00457,INT00457,CAND0492,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00458,INT00458,CAND0494,1 years,Rescheduled,,Not Required,Reschedule Review,HR_ADMIN_01
+ATT00459,INT00459,CAND0496,3 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00460,INT00460,CAND0497,2 years,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00461,INT00461,CAND0498,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01
+ATT00463,INT00463,CAND0500,Fresher,Attended,,Not Required,Continue Process,HR_ADMIN_01

@@ -1,0 +1,92 @@
+[
+  {
+    "event_id":"EVT001",
+    "event_name":"Mysore Technical Hiring Drive 1",
+    "location":"Mysore",
+    "event_date":"2026-11-07",
+    "registration_deadline":"2026-10-28",
+    "status":"Planned",
+    "capacity":136
+  },
+  {
+    "event_id":"EVT002",
+    "event_name":"Bengaluru Technical Hiring Drive 2",
+    "location":"Bengaluru",
+    "event_date":"2026-11-14",
+    "registration_deadline":"2026-11-04",
+    "status":"Planned",
+    "capacity":97
+  },
+  {
+    "event_id":"EVT003",
+    "event_name":"Hyderabad Technical Hiring Drive 3",
+    "location":"Hyderabad",
+    "event_date":"2026-11-21",
+    "registration_deadline":"2026-11-11",
+    "status":"Planned",
+    "capacity":105
+  },
+  {
+    "event_id":"EVT004",
+    "event_name":"Chennai Technical Hiring Drive 4",
+    "location":"Chennai",
+    "event_date":"2026-11-28",
+    "registration_deadline":"2026-11-18",
+    "status":"Planned",
+    "capacity":125
+  },
+  {
+    "event_id":"EVT005",
+    "event_name":"Pune Technical Hiring Drive 5",
+    "location":"Pune",
+    "event_date":"2026-12-05",
+    "registration_deadline":"2026-11-25",
+    "status":"Planned",
+    "capacity":130
+  },
+  {
+    "event_id":"EVT006",
+    "event_name":"Mumbai Technical Hiring Drive 6",
+    "location":"Mumbai",
+    "event_date":"2026-12-12",
+    "registration_deadline":"2026-12-02",
+    "status":"Planned",
+    "capacity":121
+  },
+  {
+    "event_id":"EVT007",
+    "event_name":"Delhi Technical Hiring Drive 7",
+    "location":"Delhi",
+    "event_date":"2026-12-19",
+    "registration_deadline":"2026-12-09",
+    "status":"Planned",
+    "capacity":65
+  },
+  {
+    "event_id":"EVT008",
+    "event_name":"Kochi Technical Hiring Drive 8",
+    "location":"Kochi",
+    "event_date":"2026-12-26",
+    "registration_deadline":"2026-12-16",
+    "status":"Planned",
+    "capacity":121
+  },
+  {
+    "event_id":"EVT009",
+    "event_name":"Mysore Technical Hiring Drive 9",
+    "location":"Mysore",
+    "event_date":"2027-01-02",
+    "registration_deadline":"2026-12-23",
+    "status":"Planned",
+    "capacity":68
+  },
+  {
+    "event_id":"EVT010",
+    "event_name":"Bengaluru Technical Hiring Drive 10",
+    "location":"Bengaluru",
+    "event_date":"2027-01-09",
+    "registration_deadline":"2026-12-30",
+    "status":"Planned",
+    "capacity":105
+  }
+]

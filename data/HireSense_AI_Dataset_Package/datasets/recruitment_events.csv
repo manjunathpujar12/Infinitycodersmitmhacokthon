@@ -1,0 +1,11 @@
+event_id,event_name,location,event_date,registration_deadline,status,capacity
+EVT001,Mysore Technical Hiring Drive 1,Mysore,2026-11-07,2026-10-28,Planned,136
+EVT002,Bengaluru Technical Hiring Drive 2,Bengaluru,2026-11-14,2026-11-04,Planned,97
+EVT003,Hyderabad Technical Hiring Drive 3,Hyderabad,2026-11-21,2026-11-11,Planned,105
+EVT004,Chennai Technical Hiring Drive 4,Chennai,2026-11-28,2026-11-18,Planned,125
+EVT005,Pune Technical Hiring Drive 5,Pune,2026-12-05,2026-11-25,Planned,130
+EVT006,Mumbai Technical Hiring Drive 6,Mumbai,2026-12-12,2026-12-02,Planned,121
+EVT007,Delhi Technical Hiring Drive 7,Delhi,2026-12-19,2026-12-09,Planned,65
+EVT008,Kochi Technical Hiring Drive 8,Kochi,2026-12-26,2026-12-16,Planned,121
+EVT009,Mysore Technical Hiring Drive 9,Mysore,2027-01-02,2026-12-23,Planned,68
+EVT010,Bengaluru Technical Hiring Drive 10,Bengaluru,2027-01-09,2026-12-30,Planned,105
