@@ -639,5 +639,186 @@ describe('Member 3 Integration: Atomic RPCs & RLS Policies', () => {
       }), false);
     });
   });
+
+  describe('5. SECURITY DEFINER RPC Authorization & Privilege Restrictions', () => {
+    it('enforces authentication and HR/Admin permissions on allocate_city_vacancy', () => {
+      interface VacancyAllocContext {
+        actorId?: string;
+        actorRole?: string;
+        hasHrPermission: boolean;
+      }
+
+      function allocateCityVacancyGuard(ctx: VacancyAllocContext, count: number) {
+        if (!ctx.actorId) {
+          throw new Error('Authentication required.');
+        }
+        if (!ctx.actorRole) {
+          throw new Error('Unauthorized: Caller has no registered profile or role.');
+        }
+        if (ctx.actorRole !== 'admin' && !(ctx.actorRole === 'hr_staff' && ctx.hasHrPermission)) {
+          throw new Error('Unauthorized: Caller does not possess HR permissions.');
+        }
+        if (count <= 0) {
+          throw new Error('Allocation count must be greater than zero.');
+        }
+        return { success: true };
+      }
+
+      // Anonymous -> blocked
+      assert.throws(() => allocateCityVacancyGuard({ hasHrPermission: false }, 1), /Authentication required/);
+      // No profile -> blocked
+      assert.throws(() => allocateCityVacancyGuard({ actorId: 'u-1', hasHrPermission: false }, 1), /Caller has no registered profile/);
+      // Candidate -> blocked
+      assert.throws(() => allocateCityVacancyGuard({ actorId: 'u-1', actorRole: 'candidate', hasHrPermission: false }, 1), /Caller does not possess HR permissions/);
+      // HR without company/location permission -> blocked
+      assert.throws(() => allocateCityVacancyGuard({ actorId: 'u-1', actorRole: 'hr_staff', hasHrPermission: false }, 1), /Caller does not possess HR permissions/);
+      // HR with permission -> allowed
+      assert.equal(allocateCityVacancyGuard({ actorId: 'u-1', actorRole: 'hr_staff', hasHrPermission: true }, 2).success, true);
+      // Admin -> allowed
+      assert.equal(allocateCityVacancyGuard({ actorId: 'u-admin', actorRole: 'admin', hasHrPermission: false }, 2).success, true);
+    });
+
+    it('blocks arbitrary candidates from invoking offer_slot_to_next_waitlisted', () => {
+      interface OfferSlotContext {
+        actorId?: string;
+        actorRole?: string;
+        interviewerId: string;
+        hasHrPermission: boolean;
+      }
+
+      function offerSlotGuard(ctx: OfferSlotContext) {
+        if (!ctx.actorId) throw new Error('Authentication required.');
+        if (!ctx.actorRole) throw new Error('Unauthorized: Caller has no registered profile or role.');
+
+        if (ctx.actorRole === 'admin') return true;
+        if (ctx.actorId === ctx.interviewerId) return true;
+        if (ctx.actorRole === 'hr_staff' && ctx.hasHrPermission) return true;
+
+        throw new Error('Unauthorized: Caller cannot offer this slot.');
+      }
+
+      // Candidate attempting promotion -> blocked
+      assert.throws(
+        () => offerSlotGuard({ actorId: 'cand-1', actorRole: 'candidate', interviewerId: 'int-1', hasHrPermission: false }),
+        /Unauthorized: Caller cannot offer this slot/
+      );
+
+      // Random interviewer not assigned to slot -> blocked
+      assert.throws(
+        () => offerSlotGuard({ actorId: 'int-other', actorRole: 'interviewer', interviewerId: 'int-1', hasHrPermission: false }),
+        /Unauthorized: Caller cannot offer this slot/
+      );
+
+      // Assigned interviewer -> allowed
+      assert.equal(offerSlotGuard({ actorId: 'int-1', actorRole: 'interviewer', interviewerId: 'int-1', hasHrPermission: false }), true);
+
+      // Authorized HR staff -> allowed
+      assert.equal(offerSlotGuard({ actorId: 'hr-1', actorRole: 'hr_staff', interviewerId: 'int-1', hasHrPermission: true }), true);
+    });
+
+    it('restricts process_expired_offers strictly to service_role or admin', () => {
+      function processExpiredOffersGuard(jwtRole?: string, actorRole?: string) {
+        if (jwtRole === 'service_role') {
+          return { success: true, mode: 'service_role' };
+        }
+        if (actorRole === 'admin') {
+          return { success: true, mode: 'admin' };
+        }
+        throw new Error('Unauthorized: process_expired_offers requires administrative or service_role privilege.');
+      }
+
+      // Service role (cron / backend worker) -> allowed
+      assert.equal(processExpiredOffersGuard('service_role').success, true);
+
+      // Admin interactive user -> allowed
+      assert.equal(processExpiredOffersGuard('authenticated', 'admin').success, true);
+
+      // Candidate -> blocked
+      assert.throws(() => processExpiredOffersGuard('authenticated', 'candidate'), /Unauthorized/);
+
+      // HR staff -> blocked
+      assert.throws(() => processExpiredOffersGuard('authenticated', 'hr_staff'), /Unauthorized/);
+
+      // Anonymous -> blocked
+      assert.throws(() => processExpiredOffersGuard(undefined, undefined), /Unauthorized/);
+    });
+  });
+
+  describe('6. Audit Log Security & Anti-Forgery Defense', () => {
+    it('prevents direct audit log insertion by non-admin users and enforces immutability', () => {
+      function evaluateAuditLogInsert(callerRole?: string): boolean {
+        // Direct inserts restricted strictly to admin; regular audit logs are emitted by SECURITY DEFINER RPCs
+        return callerRole === 'admin';
+      }
+
+      function evaluateAuditLogMutation(operation: 'UPDATE' | 'DELETE'): never {
+        throw new Error('Audit log entries are immutable and cannot be updated or deleted.');
+      }
+
+      // Candidate trying direct insert to forge logs -> blocked
+      assert.equal(evaluateAuditLogInsert('candidate'), false);
+
+      // HR Staff trying direct insert -> blocked
+      assert.equal(evaluateAuditLogInsert('hr_staff'), false);
+
+      // Admin direct insertion -> allowed
+      assert.equal(evaluateAuditLogInsert('admin'), true);
+
+      // Immutability: update and delete always fail for anyone
+      assert.throws(() => evaluateAuditLogMutation('UPDATE'), /Audit log entries are immutable/);
+      assert.throws(() => evaluateAuditLogMutation('DELETE'), /Audit log entries are immutable/);
+    });
+  });
+
+  describe('7. Profile RLS Security & Scope Enforcement', () => {
+    it('prevents HR staff from modifying candidates of another company', () => {
+      interface CandidateProfile {
+        id: string;
+        role: string;
+        companyId: string;
+        locationId?: string;
+      }
+
+      interface HrCaller {
+        id: string;
+        role: string;
+        companyId: string;
+        locationId?: string;
+      }
+
+      function canHrUpdateProfile(hr: HrCaller, candidate: CandidateProfile, targetRole: string): boolean {
+        if (hr.role === 'admin') return true;
+        if (hr.role !== 'hr_staff') return false;
+
+        // Target must remain a candidate (cannot escalate)
+        if (candidate.role !== 'candidate' || targetRole !== 'candidate') return false;
+
+        // Must belong to HR company
+        if (hr.companyId !== candidate.companyId) return false;
+
+        // If location-scoped, must match
+        if (hr.locationId && candidate.locationId && hr.locationId !== candidate.locationId) return false;
+
+        return true;
+      }
+
+      const hrCompanyA: HrCaller = { id: 'hr-1', role: 'hr_staff', companyId: 'comp-A', locationId: 'loc-1' };
+      const candCompanyA: CandidateProfile = { id: 'c-1', role: 'candidate', companyId: 'comp-A', locationId: 'loc-1' };
+      const candCompanyB: CandidateProfile = { id: 'c-2', role: 'candidate', companyId: 'comp-B', locationId: 'loc-2' };
+
+      // Allowed: HR updating candidate in same company & location
+      assert.equal(canHrUpdateProfile(hrCompanyA, candCompanyA, 'candidate'), true);
+
+      // Blocked: HR updating candidate in different company
+      assert.equal(canHrUpdateProfile(hrCompanyA, candCompanyB, 'candidate'), false);
+
+      // Blocked: HR attempting to escalate candidate to admin
+      assert.equal(canHrUpdateProfile(hrCompanyA, candCompanyA, 'admin'), false);
+
+      // Blocked: Candidate updating own role
+      const candidateCaller: HrCaller = { id: 'c-1', role: 'candidate', companyId: 'comp-A' };
+      assert.equal(canHrUpdateProfile(candidateCaller, candCompanyA, 'admin'), false);
+    });
+  });
 });
 

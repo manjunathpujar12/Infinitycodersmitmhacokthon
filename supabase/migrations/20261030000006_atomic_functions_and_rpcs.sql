@@ -142,9 +142,42 @@ SECURITY DEFINER
 SET search_path = public
 AS $$
 DECLARE
+    v_actor_id UUID;
+    v_actor_role user_role;
+    v_job RECORD;
     v_vacancy RECORD;
     v_new_allocated INT;
 BEGIN
+    v_actor_id := auth.uid();
+    IF v_actor_id IS NULL THEN
+        RAISE EXCEPTION 'Authentication required.';
+    END IF;
+
+    SELECT role INTO v_actor_role FROM public.profiles WHERE id = v_actor_id;
+
+    IF v_actor_role IS NULL THEN
+        RAISE EXCEPTION 'Unauthorized: Caller has no registered profile or role.';
+    END IF;
+
+    -- Validate Job Opening exists
+    SELECT * INTO v_job
+    FROM public.job_openings
+    WHERE id = p_job_opening_id;
+
+    IF NOT FOUND THEN
+        RAISE EXCEPTION 'Job opening not found with id: %', p_job_opening_id;
+    END IF;
+
+    -- Authorization Check: Admin or HR authorized for company & location
+    IF v_actor_role = 'admin' THEN
+        NULL;
+    ELSIF v_actor_role = 'hr_staff' AND public.has_hr_permission(v_job.company_id, p_location_id) THEN
+        NULL;
+    ELSE
+        RAISE EXCEPTION 'Unauthorized: Caller does not possess HR permissions for company % and location %.',
+            v_job.company_id, p_location_id;
+    END IF;
+
     IF p_count <= 0 THEN
         RAISE EXCEPTION 'Allocation count must be greater than zero.';
     END IF;
@@ -251,11 +284,26 @@ SECURITY DEFINER
 SET search_path = public
 AS $$
 DECLARE
+    v_actor_id UUID;
+    v_actor_role user_role;
     v_slot RECORD;
+    v_stage RECORD;
+    v_job RECORD;
     v_waitlist RECORD;
     v_offer_id UUID;
     v_expires_at TIMESTAMPTZ;
 BEGIN
+    v_actor_id := auth.uid();
+    IF v_actor_id IS NULL THEN
+        RAISE EXCEPTION 'Authentication required.';
+    END IF;
+
+    SELECT role INTO v_actor_role FROM public.profiles WHERE id = v_actor_id;
+
+    IF v_actor_role IS NULL THEN
+        RAISE EXCEPTION 'Unauthorized: Caller has no registered profile or role.';
+    END IF;
+
     -- 1. Check and lock slot
     SELECT * INTO v_slot
     FROM public.interview_slots
@@ -264,6 +312,25 @@ BEGIN
 
     IF NOT FOUND THEN
         RAISE EXCEPTION 'Slot not found: %', p_slot_id;
+    END IF;
+
+    SELECT * INTO v_stage
+    FROM public.interview_stages
+    WHERE id = v_slot.stage_id;
+
+    SELECT * INTO v_job
+    FROM public.job_openings
+    WHERE id = v_stage.job_opening_id;
+
+    -- Authorization check: Admin, assigned interviewer, or HR with permission for company & location
+    IF v_actor_role = 'admin' THEN
+        NULL;
+    ELSIF v_actor_id = v_slot.interviewer_id THEN
+        NULL;
+    ELSIF v_actor_role = 'hr_staff' AND public.has_hr_permission(v_job.company_id, v_slot.location_id) THEN
+        NULL;
+    ELSE
+        RAISE EXCEPTION 'Unauthorized: Caller cannot offer this slot.';
     END IF;
 
     IF v_slot.booked_count >= v_slot.max_capacity THEN
@@ -275,6 +342,7 @@ BEGIN
     FROM public.interview_waitlist
     WHERE stage_id = v_slot.stage_id
       AND status = 'waiting'
+      AND (location_id IS NULL OR location_id = v_slot.location_id)
     ORDER BY position ASC
     LIMIT 1
     FOR UPDATE SKIP LOCKED;
@@ -416,9 +484,32 @@ SECURITY DEFINER
 SET search_path = public
 AS $$
 DECLARE
+    v_actor_id UUID;
+    v_actor_role user_role;
+    v_jwt_role TEXT;
     v_offer RECORD;
     v_count INT := 0;
 BEGIN
+    -- Check if called via Supabase service_role (e.g. pg_cron, background worker, or Supabase edge function)
+    v_jwt_role := current_setting('request.jwt.claim.role', true);
+
+    IF v_jwt_role = 'service_role' THEN
+        -- Trusted service role execution allowed
+        NULL;
+    ELSE
+        -- Interactive caller: must be an authenticated admin
+        v_actor_id := auth.uid();
+        IF v_actor_id IS NULL THEN
+            RAISE EXCEPTION 'Unauthorized: process_expired_offers requires administrative or service_role privilege.';
+        END IF;
+
+        SELECT role INTO v_actor_role FROM public.profiles WHERE id = v_actor_id;
+
+        IF v_actor_role IS NULL OR v_actor_role != 'admin' THEN
+            RAISE EXCEPTION 'Unauthorized: Only administrators or trusted background workers can process expired offers.';
+        END IF;
+    END IF;
+
     FOR v_offer IN
         SELECT o.id, o.slot_id, o.waitlist_id
         FROM public.timed_slot_offers o
@@ -459,6 +550,7 @@ SET search_path = public
 AS $$
 DECLARE
     v_actor_id UUID;
+    v_actor_role user_role;
     v_booking RECORD;
     v_slot RECORD;
     v_company_id UUID;
@@ -468,6 +560,11 @@ BEGIN
     v_actor_id := auth.uid();
     IF v_actor_id IS NULL THEN
         RAISE EXCEPTION 'Authentication required to mark attendance.';
+    END IF;
+
+    SELECT role INTO v_actor_role FROM public.profiles WHERE id = v_actor_id;
+    IF v_actor_role IS NULL THEN
+        RAISE EXCEPTION 'Unauthorized: Caller has no registered profile or role.';
     END IF;
 
     -- Fetch booking and slot metadata
@@ -606,6 +703,7 @@ SET search_path = public
 AS $$
 DECLARE
     v_actor_id UUID;
+    v_actor_role user_role;
     v_case RECORD;
     v_company_id UUID;
     v_location_id UUID;
@@ -613,6 +711,11 @@ BEGIN
     v_actor_id := auth.uid();
     IF v_actor_id IS NULL THEN
         RAISE EXCEPTION 'Authentication required.';
+    END IF;
+
+    SELECT role INTO v_actor_role FROM public.profiles WHERE id = v_actor_id;
+    IF v_actor_role IS NULL THEN
+        RAISE EXCEPTION 'Unauthorized: Caller has no registered profile or role.';
     END IF;
 
     SELECT c.*, s.location_id, st.job_opening_id, b.slot_id
@@ -736,6 +839,7 @@ SET search_path = public
 AS $$
 DECLARE
     v_actor_id UUID;
+    v_actor_role user_role;
     v_claim RECORD;
     v_policy_cap NUMERIC;
     v_final_status claim_status;
@@ -743,6 +847,11 @@ BEGIN
     v_actor_id := auth.uid();
     IF v_actor_id IS NULL THEN
         RAISE EXCEPTION 'Authentication required.';
+    END IF;
+
+    SELECT role INTO v_actor_role FROM public.profiles WHERE id = v_actor_id;
+    IF v_actor_role IS NULL THEN
+        RAISE EXCEPTION 'Unauthorized: Caller has no registered profile or role.';
     END IF;
 
     SELECT * INTO v_claim
@@ -864,7 +973,7 @@ BEGIN
     END IF;
 
     SELECT role INTO v_actor_role FROM public.profiles WHERE id = v_actor_id;
-    IF v_actor_role NOT IN ('payroll_officer', 'admin') THEN
+    IF v_actor_role IS NULL OR v_actor_role NOT IN ('payroll_officer', 'admin') THEN
         RAISE EXCEPTION 'Unauthorized: Only payroll officers or administrators can record payouts.';
     END IF;
 
