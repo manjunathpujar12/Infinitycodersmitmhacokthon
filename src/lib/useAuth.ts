@@ -36,21 +36,16 @@ export interface AuthState {
 
 // ─── Role resolution ──────────────────────────────────────────────────────────
 
-const VALID_ROLES: readonly UserRole[] = [
-  'HR_ADMIN',
-  'HR_RECRUITER',
-  'INTERVIEW_COORDINATOR',
-  'FINANCE_OFFICER',
-];
-
-function resolveRole(user: { app_metadata?: Record<string, unknown>; user_metadata?: Record<string, unknown> } | null): UserRole | null {
-  if (!user) return null;
-  const raw = user.app_metadata?.role ?? user.user_metadata?.role;
-  if (typeof raw === 'string' && (VALID_ROLES as string[]).includes(raw)) {
-    return raw as UserRole;
+// Roles are mapped from the server-owned public.profiles.role column.
+// Never trust user_metadata for authorization; users can edit it themselves.
+function resolveRoleFromDatabase(role: unknown): UserRole | null {
+  switch (role) {
+    case 'admin': return 'HR_ADMIN';
+    case 'hr_staff': return 'HR_RECRUITER';
+    case 'interviewer': return 'INTERVIEW_COORDINATOR';
+    case 'payroll_officer': return 'FINANCE_OFFICER';
+    default: return null;
   }
-  // Role not set or invalid — deny access rather than silently elevating.
-  return null;
 }
 
 function resolveDisplayName(user: { email?: string | null; user_metadata?: Record<string, unknown> } | null): string | null {
@@ -69,16 +64,36 @@ export function useAuth(): AuthState {
   const [displayName, setDisplayName] = useState<string | null>(null);
   const [email, setEmail] = useState<string | null>(null);
 
-  // Helper: apply a Supabase User object to local state.
-  const applyUser = useCallback((user: Parameters<typeof resolveRole>[0]) => {
-    const resolvedRole = resolveRole(user);
-    setRole(resolvedRole);
+  // Resolve authorization from the protected database profile, never user-editable metadata.
+  const applyUser = useCallback(async (user: { id: string; email?: string | null; user_metadata?: Record<string, unknown> } | null) => {
+    if (!user) {
+      setRole(null);
+      setDisplayName(null);
+      setEmail(null);
+      setStatus('unauthenticated');
+      return;
+    }
+    setEmail(user.email ?? null);
     setDisplayName(resolveDisplayName(user));
-    setEmail((user as { email?: string | null } | null)?.email ?? null);
-    // A user without a valid role is authenticated with Supabase but must not
-    // access protected modules.  We still mark them as 'authenticated' so the
-    // dashboard shell renders — RoleGuard will block individual modules.
-    setStatus(resolvedRole !== null ? 'authenticated' : 'unauthenticated');
+    if (!supabase) {
+      setRole(null);
+      setStatus('unauthenticated');
+      return;
+    }
+    const { data, error } = await supabase.from('profiles')
+      .select('role, full_name')
+      .eq('id', user.id)
+      .maybeSingle();
+    if (error) {
+      console.error('Unable to resolve HR role from profiles:', error.message);
+      setRole(null);
+      setStatus('unauthenticated');
+      return;
+    }
+    const resolvedRole = resolveRoleFromDatabase(data?.role);
+    setRole(resolvedRole);
+    setDisplayName(data?.full_name || resolveDisplayName(user));
+    setStatus(resolvedRole ? 'authenticated' : 'unauthenticated');
   }, []);
 
   useEffect(() => {
@@ -91,7 +106,7 @@ export function useAuth(): AuthState {
     // 1. Restore existing session synchronously from localStorage.
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session?.user) {
-        applyUser(session.user);
+        void applyUser(session.user);
       } else {
         setStatus('unauthenticated');
       }
