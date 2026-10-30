@@ -35,7 +35,8 @@ import {
   getSavedSupabaseConfig,
   saveSupabaseConfig,
   testSupabaseConnection,
-  getSupabaseClient
+  getSupabaseClient,
+  isSupabaseConfigured
 } from '../services/supabase';
 
 export interface ToastMessage {
@@ -192,6 +193,11 @@ export const CandidateAuthProvider: React.FC<{ children: ReactNode }> = ({ child
   // Restore and observe the real Supabase Auth session. No demo identity is created.
   useEffect(() => {
     let active = true;
+    if (!isSupabaseConfigured) {
+      setIsAuthenticated(false);
+      setAuthUser(null);
+      return () => { active = false; };
+    }
     const client = getSupabaseClient();
     const applyUser = async (user: any) => {
       if (!active) return;
@@ -290,7 +296,9 @@ export const CandidateAuthProvider: React.FC<{ children: ReactNode }> = ({ child
       });
       if (error) throw error;
       if (!data.session) {
-        return { success: true, message: 'Registration received. Check your email to confirm your account, then sign in.' };
+        const message = 'Registration received. Check your email to confirm your account, then sign in.';
+        showToast('info', 'Confirm Your Email', message);
+        return { success: true, message };
       }
       return { success: true, message: 'Account created and signed in.' };
     } catch (err: any) {
