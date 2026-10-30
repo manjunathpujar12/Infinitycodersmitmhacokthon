@@ -1,5 +1,5 @@
 import { SupabaseClient } from '@supabase/supabase-js';
-import { RecordClaimPayoutRpc } from '../../../types/database.types.js';
+import { RecordClaimPayoutRpc, ProcessPayrollBatchRpc } from '../../../types/database.types.js';
 
 export interface RecordPayoutInput {
   claimId: string;
@@ -9,8 +9,31 @@ export interface RecordPayoutInput {
   notes?: string;
 }
 
+export interface ProcessBatchInput {
+  batchReference: string;
+  claimIds?: string[];
+  notes?: string;
+}
+
 export class PayoutService {
   constructor(private client: SupabaseClient) {}
+
+  /**
+   * Processes a batch of HR-approved expense claims atomically
+   */
+  async processPayrollBatch(input: ProcessBatchInput): Promise<ProcessPayrollBatchRpc['Returns']> {
+    const { data, error } = await this.client.rpc('process_payroll_batch', {
+      p_batch_reference: input.batchReference,
+      p_claim_ids: input.claimIds || null,
+      p_notes: input.notes || null,
+    });
+
+    if (error) {
+      throw new Error(`Failed to process payroll batch: ${error.message}`);
+    }
+
+    return data as ProcessPayrollBatchRpc['Returns'];
+  }
 
   /**
    * Records payment settlement for an HR-approved expense claim

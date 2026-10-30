@@ -453,3 +453,73 @@ export interface RecordClaimPayoutRpc {
     payout_amount: number;
   };
 }
+
+export interface CandidateAllocation {
+  id: string;
+  candidate_id: string;
+  job_opening_id: string;
+  location_id: string;
+  status: 'allocated' | 'overflow' | 'declined' | 'cancelled';
+  is_overflow: boolean;
+  allocated_at: string;
+  allocated_by?: string | null;
+  metadata: Record<string, unknown>;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface AllocateCandidateRpc {
+  Args: {
+    p_candidate_id: string;
+    p_job_opening_id: string;
+    p_location_id: string;
+    p_allow_overflow?: boolean;
+  };
+  Returns: {
+    success: boolean;
+    allocation_id: string;
+    candidate_id: string;
+    job_opening_id: string;
+    location_id: string;
+    city: string;
+    status: 'allocated' | 'overflow' | 'declined' | 'cancelled';
+    is_overflow: boolean;
+    allocated_count: number;
+    total_capacity: number;
+    remaining_capacity: number;
+  };
+}
+
+export interface FastFillSlotRpc {
+  Args: {
+    p_slot_id: string;
+    p_auto_confirm?: boolean;
+    p_validity_minutes?: number;
+  };
+  Returns: {
+    success: boolean;
+    action?: 'auto_confirmed' | 'timed_offer_created';
+    slot_id?: string;
+    candidate_id?: string;
+    booking_id?: string;
+    offer_id?: string;
+    waitlist_id?: string;
+    expires_at?: string;
+    message?: string;
+  };
+}
+
+export interface ProcessPayrollBatchRpc {
+  Args: {
+    p_batch_reference: string;
+    p_claim_ids?: string[] | null;
+    p_notes?: string | null;
+  };
+  Returns: {
+    success: boolean;
+    batch_reference: string;
+    processed_count: number;
+    total_payout_amount: number;
+    processed_claim_ids: string[];
+  };
+}

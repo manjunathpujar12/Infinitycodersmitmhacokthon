@@ -2,6 +2,8 @@ import { SupabaseClient } from '@supabase/supabase-js';
 import {
   BookInterviewSlotRpc,
   AllocateCityVacancyRpc,
+  AllocateCandidateRpc,
+  FastFillSlotRpc,
   JoinInterviewWaitlistRpc,
   OfferSlotToNextWaitlistedRpc,
   ClaimTimedSlotOfferRpc,
@@ -14,6 +16,51 @@ import {
 
 export class BookingService {
   constructor(private client: SupabaseClient) {}
+
+  /**
+   * Atomically checks city capacity, prevents duplicates, handles overflow,
+   * and creates a candidate allocation record for a job opening and location
+   */
+  async allocateCandidate(
+    candidateId: string,
+    jobOpeningId: string,
+    locationId: string,
+    allowOverflow: boolean = false
+  ): Promise<AllocateCandidateRpc['Returns']> {
+    const { data, error } = await this.client.rpc('allocate_candidate', {
+      p_candidate_id: candidateId,
+      p_job_opening_id: jobOpeningId,
+      p_location_id: locationId,
+      p_allow_overflow: allowOverflow,
+    });
+
+    if (error) {
+      throw new Error(`Candidate allocation error: ${error.message}`);
+    }
+
+    return data as AllocateCandidateRpc['Returns'];
+  }
+
+  /**
+   * Atomically recovers an interview slot by fast-filling with the next waitlisted candidate
+   */
+  async fastFillSlot(
+    slotId: string,
+    autoConfirm: boolean = true,
+    validityMinutes: number = 30
+  ): Promise<FastFillSlotRpc['Returns']> {
+    const { data, error } = await this.client.rpc('fast_fill_slot', {
+      p_slot_id: slotId,
+      p_auto_confirm: autoConfirm,
+      p_validity_minutes: validityMinutes,
+    });
+
+    if (error) {
+      throw new Error(`Fast fill slot error: ${error.message}`);
+    }
+
+    return data as FastFillSlotRpc['Returns'];
+  }
 
   /**
    * Atomically books an open interview slot with row-level locking

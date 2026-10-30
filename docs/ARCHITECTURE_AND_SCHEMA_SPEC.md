@@ -316,6 +316,47 @@ All critical state transitions run inside **PostgreSQL `SECURITY DEFINER`** func
 - Enforces that claim is in `hr_approved` status.
 - Inserts/updates `claim_payouts`, masks sensitive bank details, marks claim as `paid`.
 
+### 5.8. `allocate_candidate(p_candidate_id UUID, p_job_opening_id UUID, p_location_id UUID, p_allow_overflow BOOLEAN DEFAULT FALSE)`
+- **Concurrency Control:**
+  1. Verifies caller authentication and non-null role (`admin` or authorized `hr_staff` for company & location).
+  2. Acquires row lock `FOR UPDATE` on candidate profile (`public.profiles`) to serialize concurrent allocations for the same candidate.
+  3. Acquires row lock `FOR UPDATE` on `public.city_vacancies` for `(job_opening_id, location_id)`.
+  4. Queries `public.candidate_allocations` under lock for `(candidate_id, job_opening_id)`. If an allocation with `status = 'allocated'` exists, raises `Duplicate Allocation` exception and rolls back without incrementing vacancy counts.
+- **Capacity & Overflow Handling:**
+  - If `allocated_count < total_capacity`: increments `allocated_count` by 1 and records status `'allocated'`.
+  - If `allocated_count >= total_capacity` and `p_allow_overflow = TRUE`: flags candidate as `status = 'overflow'` with `is_overflow = TRUE` without incrementing `city_vacancies.allocated_count` (respecting `chk_allocated_within_capacity`).
+  - If capacity exceeded and `p_allow_overflow = FALSE`: throws capacity exceeded exception.
+- **Return JSON Structure:**
+  ```json
+  {
+    "success": true,
+    "allocation_id": "UUID",
+    "candidate_id": "UUID",
+    "job_opening_id": "UUID",
+    "location_id": "UUID",
+    "city": "Bengaluru",
+    "status": "allocated",
+    "is_overflow": false,
+    "allocated_count": 3,
+    "total_capacity": 5,
+    "remaining_capacity": 2
+  }
+  ```
+
+### 5.9. `fast_fill_slot(p_slot_id UUID, p_auto_confirm BOOLEAN DEFAULT TRUE, p_validity_minutes INT DEFAULT 30)`
+- **Concurrency Control:** `SELECT * FROM public.interview_slots WHERE id = p_slot_id FOR UPDATE;`
+- **Authorization:** Only `admin`, the assigned interviewer, or authorized `hr_staff`.
+- **Validation:** Checks available slot capacity (`booked_count < max_capacity`).
+- **Queue Promotion:** Queries top waiting candidate in `public.interview_waitlist` matching stage and location using `FOR UPDATE SKIP LOCKED`.
+- **Modes:**
+  - `p_auto_confirm = TRUE`: Directly creates confirmed booking in `public.interview_bookings`, increments slot `booked_count`, marks slot `'booked'` if full, and transitions waitlist status to `'accepted'`.
+  - `p_auto_confirm = FALSE`: Creates a timed priority reservation in `public.timed_slot_offers` and transitions waitlist status to `'offered'`.
+
+### 5.10. `process_payroll_batch(p_batch_reference VARCHAR(128), p_claim_ids UUID[] DEFAULT NULL, p_notes TEXT DEFAULT NULL)`
+- **Concurrency Control:** Iterates and locks eligible claims with `SELECT ... FROM public.expense_claims WHERE status = 'hr_approved' ... FOR UPDATE;`
+- **Authorization:** Strictly restricted to `payroll_officer` or `admin`.
+- **Settlement Operations:** Atomically creates settlement records in `public.claim_payouts` with payment reference and masked 4-digit bank account, transitions claim status from `'hr_approved'` to `'paid'`, and emits structured audit logs.
+
 ---
 
 ## 6. Row Level Security (RLS) Policy Architecture
