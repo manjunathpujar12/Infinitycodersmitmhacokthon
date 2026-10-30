@@ -28,12 +28,12 @@ export async function testSupabaseConnection(): Promise<{ success: boolean; mess
 
   const start = performance.now();
   try {
-    const { error } = await supabase.from('hiring_drives').select('count', { count: 'exact', head: true });
+    const { error } = await supabase.from('profiles').select('id', { head: true }).limit(1);
     const latencyMs = Math.round(performance.now() - start);
     if (error) {
       return { success: false, message: `Connected to Supabase but query failed: ${error.message}`, latencyMs };
     }
-    return { success: true, message: `Successfully connected to Supabase (${latencyMs}ms)`, latencyMs };
+    return { success: true, message: `Successfully connected to HireSlot profiles (${latencyMs}ms)`, latencyMs };
   } catch (err: any) {
     return { success: false, message: `Connection error: ${err.message || 'Unknown network error'}` };
   }
