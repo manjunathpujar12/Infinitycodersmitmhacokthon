@@ -1,0 +1,4930 @@
+[
+  {
+    "application_id":"APP0001_1",
+    "candidate_id":"CAND0001",
+    "job_id":"JOB012",
+    "applied_date":"2026-11-10",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0001_2",
+    "candidate_id":"CAND0001",
+    "job_id":"JOB010",
+    "applied_date":"2026-11-10",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0002_1",
+    "candidate_id":"CAND0002",
+    "job_id":"JOB020",
+    "applied_date":"2026-11-06",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0003_1",
+    "candidate_id":"CAND0003",
+    "job_id":"JOB001",
+    "applied_date":"2026-11-08",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0003_2",
+    "candidate_id":"CAND0003",
+    "job_id":"JOB012",
+    "applied_date":"2026-11-08",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0004_1",
+    "candidate_id":"CAND0004",
+    "job_id":"JOB020",
+    "applied_date":"2026-10-20",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0005_1",
+    "candidate_id":"CAND0005",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-05",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0006_1",
+    "candidate_id":"CAND0006",
+    "job_id":"JOB013",
+    "applied_date":"2026-11-12",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0006_2",
+    "candidate_id":"CAND0006",
+    "job_id":"JOB006",
+    "applied_date":"2026-11-12",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0007_1",
+    "candidate_id":"CAND0007",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-31",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0008_1",
+    "candidate_id":"CAND0008",
+    "job_id":"JOB001",
+    "applied_date":"2026-11-07",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0009_1",
+    "candidate_id":"CAND0009",
+    "job_id":"JOB013",
+    "applied_date":"2026-11-02",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0010_1",
+    "candidate_id":"CAND0010",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-14",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0011_1",
+    "candidate_id":"CAND0011",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-20",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0011_2",
+    "candidate_id":"CAND0011",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-20",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0012_1",
+    "candidate_id":"CAND0012",
+    "job_id":"JOB011",
+    "applied_date":"2026-10-15",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0013_1",
+    "candidate_id":"CAND0013",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-08",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0014_1",
+    "candidate_id":"CAND0014",
+    "job_id":"JOB018",
+    "applied_date":"2026-11-13",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0015_1",
+    "candidate_id":"CAND0015",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-02",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0016_1",
+    "candidate_id":"CAND0016",
+    "job_id":"JOB017",
+    "applied_date":"2026-10-30",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0016_2",
+    "candidate_id":"CAND0016",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-30",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0017_1",
+    "candidate_id":"CAND0017",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-27",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0018_1",
+    "candidate_id":"CAND0018",
+    "job_id":"JOB004",
+    "applied_date":"2026-11-06",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0019_1",
+    "candidate_id":"CAND0019",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-02",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0020_1",
+    "candidate_id":"CAND0020",
+    "job_id":"JOB011",
+    "applied_date":"2026-11-14",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0021_1",
+    "candidate_id":"CAND0021",
+    "job_id":"JOB016",
+    "applied_date":"2026-11-07",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0022_1",
+    "candidate_id":"CAND0022",
+    "job_id":"JOB013",
+    "applied_date":"2026-11-01",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0023_1",
+    "candidate_id":"CAND0023",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-31",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0024_1",
+    "candidate_id":"CAND0024",
+    "job_id":"JOB009",
+    "applied_date":"2026-10-26",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0025_1",
+    "candidate_id":"CAND0025",
+    "job_id":"JOB016",
+    "applied_date":"2026-11-12",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0026_1",
+    "candidate_id":"CAND0026",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-11",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0027_1",
+    "candidate_id":"CAND0027",
+    "job_id":"JOB003",
+    "applied_date":"2026-11-07",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0027_2",
+    "candidate_id":"CAND0027",
+    "job_id":"JOB020",
+    "applied_date":"2026-11-07",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0028_1",
+    "candidate_id":"CAND0028",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-04",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0028_2",
+    "candidate_id":"CAND0028",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-04",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0029_1",
+    "candidate_id":"CAND0029",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-05",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0030_1",
+    "candidate_id":"CAND0030",
+    "job_id":"JOB020",
+    "applied_date":"2026-10-03",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0031_1",
+    "candidate_id":"CAND0031",
+    "job_id":"JOB003",
+    "applied_date":"2026-10-11",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0031_2",
+    "candidate_id":"CAND0031",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-11",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0032_1",
+    "candidate_id":"CAND0032",
+    "job_id":"JOB020",
+    "applied_date":"2026-10-23",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0033_1",
+    "candidate_id":"CAND0033",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-13",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0033_2",
+    "candidate_id":"CAND0033",
+    "job_id":"JOB009",
+    "applied_date":"2026-10-13",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0034_1",
+    "candidate_id":"CAND0034",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-17",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0035_1",
+    "candidate_id":"CAND0035",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-03",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0036_1",
+    "candidate_id":"CAND0036",
+    "job_id":"JOB001",
+    "applied_date":"2026-10-13",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0037_1",
+    "candidate_id":"CAND0037",
+    "job_id":"JOB003",
+    "applied_date":"2026-10-01",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0037_2",
+    "candidate_id":"CAND0037",
+    "job_id":"JOB019",
+    "applied_date":"2026-10-01",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0038_1",
+    "candidate_id":"CAND0038",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-26",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0039_1",
+    "candidate_id":"CAND0039",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-07",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0040_1",
+    "candidate_id":"CAND0040",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-23",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0041_1",
+    "candidate_id":"CAND0041",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-25",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0042_1",
+    "candidate_id":"CAND0042",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-26",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0043_1",
+    "candidate_id":"CAND0043",
+    "job_id":"JOB003",
+    "applied_date":"2026-10-05",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0044_1",
+    "candidate_id":"CAND0044",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-16",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0045_1",
+    "candidate_id":"CAND0045",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-30",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0046_1",
+    "candidate_id":"CAND0046",
+    "job_id":"JOB020",
+    "applied_date":"2026-11-15",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0047_1",
+    "candidate_id":"CAND0047",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-20",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0048_1",
+    "candidate_id":"CAND0048",
+    "job_id":"JOB013",
+    "applied_date":"2026-11-14",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0049_1",
+    "candidate_id":"CAND0049",
+    "job_id":"JOB004",
+    "applied_date":"2026-11-08",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0050_1",
+    "candidate_id":"CAND0050",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-02",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0051_1",
+    "candidate_id":"CAND0051",
+    "job_id":"JOB017",
+    "applied_date":"2026-10-16",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0052_1",
+    "candidate_id":"CAND0052",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-23",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0053_1",
+    "candidate_id":"CAND0053",
+    "job_id":"JOB011",
+    "applied_date":"2026-10-31",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0054_1",
+    "candidate_id":"CAND0054",
+    "job_id":"JOB015",
+    "applied_date":"2026-11-08",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0055_1",
+    "candidate_id":"CAND0055",
+    "job_id":"JOB009",
+    "applied_date":"2026-10-03",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0056_1",
+    "candidate_id":"CAND0056",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-13",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0057_1",
+    "candidate_id":"CAND0057",
+    "job_id":"JOB011",
+    "applied_date":"2026-11-06",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0058_1",
+    "candidate_id":"CAND0058",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-21",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0059_1",
+    "candidate_id":"CAND0059",
+    "job_id":"JOB011",
+    "applied_date":"2026-10-27",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0060_1",
+    "candidate_id":"CAND0060",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-16",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0060_2",
+    "candidate_id":"CAND0060",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-16",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0061_1",
+    "candidate_id":"CAND0061",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-04",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0062_1",
+    "candidate_id":"CAND0062",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-13",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0063_1",
+    "candidate_id":"CAND0063",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-27",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0063_2",
+    "candidate_id":"CAND0063",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-27",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0064_1",
+    "candidate_id":"CAND0064",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-30",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0065_1",
+    "candidate_id":"CAND0065",
+    "job_id":"JOB017",
+    "applied_date":"2026-11-15",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0065_2",
+    "candidate_id":"CAND0065",
+    "job_id":"JOB008",
+    "applied_date":"2026-11-15",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0066_1",
+    "candidate_id":"CAND0066",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-19",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0067_1",
+    "candidate_id":"CAND0067",
+    "job_id":"JOB004",
+    "applied_date":"2026-11-11",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0067_2",
+    "candidate_id":"CAND0067",
+    "job_id":"JOB010",
+    "applied_date":"2026-11-11",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0068_1",
+    "candidate_id":"CAND0068",
+    "job_id":"JOB020",
+    "applied_date":"2026-10-08",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0068_2",
+    "candidate_id":"CAND0068",
+    "job_id":"JOB012",
+    "applied_date":"2026-10-08",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0069_1",
+    "candidate_id":"CAND0069",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-11",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0070_1",
+    "candidate_id":"CAND0070",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-03",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0070_2",
+    "candidate_id":"CAND0070",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-03",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0071_1",
+    "candidate_id":"CAND0071",
+    "job_id":"JOB017",
+    "applied_date":"2026-11-12",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0072_1",
+    "candidate_id":"CAND0072",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-10",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0073_1",
+    "candidate_id":"CAND0073",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-27",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0074_1",
+    "candidate_id":"CAND0074",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-13",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0075_1",
+    "candidate_id":"CAND0075",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-02",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0076_1",
+    "candidate_id":"CAND0076",
+    "job_id":"JOB018",
+    "applied_date":"2026-11-15",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0076_2",
+    "candidate_id":"CAND0076",
+    "job_id":"JOB011",
+    "applied_date":"2026-11-15",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0077_1",
+    "candidate_id":"CAND0077",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-24",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0077_2",
+    "candidate_id":"CAND0077",
+    "job_id":"JOB001",
+    "applied_date":"2026-10-24",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0078_1",
+    "candidate_id":"CAND0078",
+    "job_id":"JOB006",
+    "applied_date":"2026-11-13",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0079_1",
+    "candidate_id":"CAND0079",
+    "job_id":"JOB005",
+    "applied_date":"2026-11-10",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0079_2",
+    "candidate_id":"CAND0079",
+    "job_id":"JOB007",
+    "applied_date":"2026-11-10",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0080_1",
+    "candidate_id":"CAND0080",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-12",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0081_1",
+    "candidate_id":"CAND0081",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-17",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0082_1",
+    "candidate_id":"CAND0082",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-21",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0083_1",
+    "candidate_id":"CAND0083",
+    "job_id":"JOB003",
+    "applied_date":"2026-11-04",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0084_1",
+    "candidate_id":"CAND0084",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-23",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0085_1",
+    "candidate_id":"CAND0085",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-26",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0086_1",
+    "candidate_id":"CAND0086",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-30",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0086_2",
+    "candidate_id":"CAND0086",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-30",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0087_1",
+    "candidate_id":"CAND0087",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-09",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0088_1",
+    "candidate_id":"CAND0088",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-29",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0089_1",
+    "candidate_id":"CAND0089",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-18",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0090_1",
+    "candidate_id":"CAND0090",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-06",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0091_1",
+    "candidate_id":"CAND0091",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-02",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0092_1",
+    "candidate_id":"CAND0092",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-01",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0092_2",
+    "candidate_id":"CAND0092",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-01",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0093_1",
+    "candidate_id":"CAND0093",
+    "job_id":"JOB019",
+    "applied_date":"2026-10-14",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0094_1",
+    "candidate_id":"CAND0094",
+    "job_id":"JOB011",
+    "applied_date":"2026-10-20",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0095_1",
+    "candidate_id":"CAND0095",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-05",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0096_1",
+    "candidate_id":"CAND0096",
+    "job_id":"JOB005",
+    "applied_date":"2026-11-12",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0096_2",
+    "candidate_id":"CAND0096",
+    "job_id":"JOB015",
+    "applied_date":"2026-11-12",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0097_1",
+    "candidate_id":"CAND0097",
+    "job_id":"JOB002",
+    "applied_date":"2026-11-06",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0097_2",
+    "candidate_id":"CAND0097",
+    "job_id":"JOB007",
+    "applied_date":"2026-11-06",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0098_1",
+    "candidate_id":"CAND0098",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-20",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0099_1",
+    "candidate_id":"CAND0099",
+    "job_id":"JOB004",
+    "applied_date":"2026-11-03",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0100_1",
+    "candidate_id":"CAND0100",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-29",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0101_1",
+    "candidate_id":"CAND0101",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-10",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0102_1",
+    "candidate_id":"CAND0102",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-02",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0103_1",
+    "candidate_id":"CAND0103",
+    "job_id":"JOB008",
+    "applied_date":"2026-11-11",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0104_1",
+    "candidate_id":"CAND0104",
+    "job_id":"JOB011",
+    "applied_date":"2026-10-31",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0104_2",
+    "candidate_id":"CAND0104",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-31",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0105_1",
+    "candidate_id":"CAND0105",
+    "job_id":"JOB012",
+    "applied_date":"2026-10-13",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0106_1",
+    "candidate_id":"CAND0106",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-25",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0107_1",
+    "candidate_id":"CAND0107",
+    "job_id":"JOB003",
+    "applied_date":"2026-10-01",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0107_2",
+    "candidate_id":"CAND0107",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-01",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0108_1",
+    "candidate_id":"CAND0108",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-28",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0109_1",
+    "candidate_id":"CAND0109",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-02",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0110_1",
+    "candidate_id":"CAND0110",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-06",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0110_2",
+    "candidate_id":"CAND0110",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-06",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0111_1",
+    "candidate_id":"CAND0111",
+    "job_id":"JOB019",
+    "applied_date":"2026-10-17",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0112_1",
+    "candidate_id":"CAND0112",
+    "job_id":"JOB015",
+    "applied_date":"2026-11-11",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0113_1",
+    "candidate_id":"CAND0113",
+    "job_id":"JOB013",
+    "applied_date":"2026-11-11",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0114_1",
+    "candidate_id":"CAND0114",
+    "job_id":"JOB017",
+    "applied_date":"2026-10-26",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0115_1",
+    "candidate_id":"CAND0115",
+    "job_id":"JOB013",
+    "applied_date":"2026-11-11",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0116_1",
+    "candidate_id":"CAND0116",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-22",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0117_1",
+    "candidate_id":"CAND0117",
+    "job_id":"JOB007",
+    "applied_date":"2026-11-02",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0118_1",
+    "candidate_id":"CAND0118",
+    "job_id":"JOB004",
+    "applied_date":"2026-11-10",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0119_1",
+    "candidate_id":"CAND0119",
+    "job_id":"JOB012",
+    "applied_date":"2026-10-29",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0120_1",
+    "candidate_id":"CAND0120",
+    "job_id":"JOB009",
+    "applied_date":"2026-11-10",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0120_2",
+    "candidate_id":"CAND0120",
+    "job_id":"JOB002",
+    "applied_date":"2026-11-10",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0121_1",
+    "candidate_id":"CAND0121",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-02",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0122_1",
+    "candidate_id":"CAND0122",
+    "job_id":"JOB001",
+    "applied_date":"2026-10-20",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0123_1",
+    "candidate_id":"CAND0123",
+    "job_id":"JOB012",
+    "applied_date":"2026-11-12",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0124_1",
+    "candidate_id":"CAND0124",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-01",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0125_1",
+    "candidate_id":"CAND0125",
+    "job_id":"JOB017",
+    "applied_date":"2026-11-09",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0125_2",
+    "candidate_id":"CAND0125",
+    "job_id":"JOB015",
+    "applied_date":"2026-11-09",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0126_1",
+    "candidate_id":"CAND0126",
+    "job_id":"JOB012",
+    "applied_date":"2026-10-21",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0127_1",
+    "candidate_id":"CAND0127",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-30",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0128_1",
+    "candidate_id":"CAND0128",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-26",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0128_2",
+    "candidate_id":"CAND0128",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-26",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0129_1",
+    "candidate_id":"CAND0129",
+    "job_id":"JOB019",
+    "applied_date":"2026-10-09",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0130_1",
+    "candidate_id":"CAND0130",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-04",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0131_1",
+    "candidate_id":"CAND0131",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-27",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0131_2",
+    "candidate_id":"CAND0131",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-27",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0132_1",
+    "candidate_id":"CAND0132",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-21",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0133_1",
+    "candidate_id":"CAND0133",
+    "job_id":"JOB017",
+    "applied_date":"2026-10-23",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0133_2",
+    "candidate_id":"CAND0133",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-23",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0134_1",
+    "candidate_id":"CAND0134",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-07",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0135_1",
+    "candidate_id":"CAND0135",
+    "job_id":"JOB016",
+    "applied_date":"2026-11-02",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0136_1",
+    "candidate_id":"CAND0136",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-14",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0137_1",
+    "candidate_id":"CAND0137",
+    "job_id":"JOB005",
+    "applied_date":"2026-11-01",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0138_1",
+    "candidate_id":"CAND0138",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-18",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0139_1",
+    "candidate_id":"CAND0139",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-16",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0140_1",
+    "candidate_id":"CAND0140",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-03",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0141_1",
+    "candidate_id":"CAND0141",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-11",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0142_1",
+    "candidate_id":"CAND0142",
+    "job_id":"JOB020",
+    "applied_date":"2026-11-10",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0143_1",
+    "candidate_id":"CAND0143",
+    "job_id":"JOB010",
+    "applied_date":"2026-11-04",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0144_1",
+    "candidate_id":"CAND0144",
+    "job_id":"JOB016",
+    "applied_date":"2026-11-04",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0145_1",
+    "candidate_id":"CAND0145",
+    "job_id":"JOB015",
+    "applied_date":"2026-11-15",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0146_1",
+    "candidate_id":"CAND0146",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-15",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0147_1",
+    "candidate_id":"CAND0147",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-11",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0148_1",
+    "candidate_id":"CAND0148",
+    "job_id":"JOB012",
+    "applied_date":"2026-11-02",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0149_1",
+    "candidate_id":"CAND0149",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-31",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0150_1",
+    "candidate_id":"CAND0150",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-21",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0151_1",
+    "candidate_id":"CAND0151",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-17",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0152_1",
+    "candidate_id":"CAND0152",
+    "job_id":"JOB005",
+    "applied_date":"2026-11-04",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0153_1",
+    "candidate_id":"CAND0153",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-23",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0153_2",
+    "candidate_id":"CAND0153",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-23",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0154_1",
+    "candidate_id":"CAND0154",
+    "job_id":"JOB007",
+    "applied_date":"2026-11-14",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0155_1",
+    "candidate_id":"CAND0155",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-02",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0156_1",
+    "candidate_id":"CAND0156",
+    "job_id":"JOB018",
+    "applied_date":"2026-11-03",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0156_2",
+    "candidate_id":"CAND0156",
+    "job_id":"JOB016",
+    "applied_date":"2026-11-03",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0157_1",
+    "candidate_id":"CAND0157",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-12",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0157_2",
+    "candidate_id":"CAND0157",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-12",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0158_1",
+    "candidate_id":"CAND0158",
+    "job_id":"JOB009",
+    "applied_date":"2026-10-03",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0159_1",
+    "candidate_id":"CAND0159",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-03",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0159_2",
+    "candidate_id":"CAND0159",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-03",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0160_1",
+    "candidate_id":"CAND0160",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-11",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0160_2",
+    "candidate_id":"CAND0160",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-11",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0161_1",
+    "candidate_id":"CAND0161",
+    "job_id":"JOB017",
+    "applied_date":"2026-11-04",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0162_1",
+    "candidate_id":"CAND0162",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-27",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0163_1",
+    "candidate_id":"CAND0163",
+    "job_id":"JOB006",
+    "applied_date":"2026-11-05",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0164_1",
+    "candidate_id":"CAND0164",
+    "job_id":"JOB012",
+    "applied_date":"2026-10-28",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0165_1",
+    "candidate_id":"CAND0165",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-26",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0166_1",
+    "candidate_id":"CAND0166",
+    "job_id":"JOB019",
+    "applied_date":"2026-10-21",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0167_1",
+    "candidate_id":"CAND0167",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-10",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0168_1",
+    "candidate_id":"CAND0168",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-18",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0169_1",
+    "candidate_id":"CAND0169",
+    "job_id":"JOB020",
+    "applied_date":"2026-11-14",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0170_1",
+    "candidate_id":"CAND0170",
+    "job_id":"JOB007",
+    "applied_date":"2026-11-11",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0171_1",
+    "candidate_id":"CAND0171",
+    "job_id":"JOB011",
+    "applied_date":"2026-10-20",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0171_2",
+    "candidate_id":"CAND0171",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-20",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0172_1",
+    "candidate_id":"CAND0172",
+    "job_id":"JOB004",
+    "applied_date":"2026-11-13",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0173_1",
+    "candidate_id":"CAND0173",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-07",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0174_1",
+    "candidate_id":"CAND0174",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-15",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0175_1",
+    "candidate_id":"CAND0175",
+    "job_id":"JOB017",
+    "applied_date":"2026-10-03",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0176_1",
+    "candidate_id":"CAND0176",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-30",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0177_1",
+    "candidate_id":"CAND0177",
+    "job_id":"JOB019",
+    "applied_date":"2026-11-10",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0178_1",
+    "candidate_id":"CAND0178",
+    "job_id":"JOB020",
+    "applied_date":"2026-10-10",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0179_1",
+    "candidate_id":"CAND0179",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-09",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0180_1",
+    "candidate_id":"CAND0180",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-27",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0181_1",
+    "candidate_id":"CAND0181",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-31",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0182_1",
+    "candidate_id":"CAND0182",
+    "job_id":"JOB003",
+    "applied_date":"2026-10-20",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0183_1",
+    "candidate_id":"CAND0183",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-07",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0184_1",
+    "candidate_id":"CAND0184",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-19",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0184_2",
+    "candidate_id":"CAND0184",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-19",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0185_1",
+    "candidate_id":"CAND0185",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-04",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0185_2",
+    "candidate_id":"CAND0185",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-04",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0186_1",
+    "candidate_id":"CAND0186",
+    "job_id":"JOB011",
+    "applied_date":"2026-10-23",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0187_1",
+    "candidate_id":"CAND0187",
+    "job_id":"JOB020",
+    "applied_date":"2026-11-12",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0188_1",
+    "candidate_id":"CAND0188",
+    "job_id":"JOB016",
+    "applied_date":"2026-11-04",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0189_1",
+    "candidate_id":"CAND0189",
+    "job_id":"JOB014",
+    "applied_date":"2026-11-15",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0190_1",
+    "candidate_id":"CAND0190",
+    "job_id":"JOB017",
+    "applied_date":"2026-11-11",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0190_2",
+    "candidate_id":"CAND0190",
+    "job_id":"JOB016",
+    "applied_date":"2026-11-11",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0191_1",
+    "candidate_id":"CAND0191",
+    "job_id":"JOB001",
+    "applied_date":"2026-10-16",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0192_1",
+    "candidate_id":"CAND0192",
+    "job_id":"JOB009",
+    "applied_date":"2026-11-07",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0192_2",
+    "candidate_id":"CAND0192",
+    "job_id":"JOB015",
+    "applied_date":"2026-11-07",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0193_1",
+    "candidate_id":"CAND0193",
+    "job_id":"JOB019",
+    "applied_date":"2026-10-03",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0194_1",
+    "candidate_id":"CAND0194",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-31",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0194_2",
+    "candidate_id":"CAND0194",
+    "job_id":"JOB001",
+    "applied_date":"2026-10-31",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0195_1",
+    "candidate_id":"CAND0195",
+    "job_id":"JOB005",
+    "applied_date":"2026-11-13",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0196_1",
+    "candidate_id":"CAND0196",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-06",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0197_1",
+    "candidate_id":"CAND0197",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-29",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0198_1",
+    "candidate_id":"CAND0198",
+    "job_id":"JOB009",
+    "applied_date":"2026-11-02",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0199_1",
+    "candidate_id":"CAND0199",
+    "job_id":"JOB018",
+    "applied_date":"2026-11-10",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0200_1",
+    "candidate_id":"CAND0200",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-15",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0200_2",
+    "candidate_id":"CAND0200",
+    "job_id":"JOB001",
+    "applied_date":"2026-10-15",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0201_1",
+    "candidate_id":"CAND0201",
+    "job_id":"JOB019",
+    "applied_date":"2026-11-04",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0201_2",
+    "candidate_id":"CAND0201",
+    "job_id":"JOB010",
+    "applied_date":"2026-11-04",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0202_1",
+    "candidate_id":"CAND0202",
+    "job_id":"JOB003",
+    "applied_date":"2026-11-10",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0203_1",
+    "candidate_id":"CAND0203",
+    "job_id":"JOB002",
+    "applied_date":"2026-11-12",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0204_1",
+    "candidate_id":"CAND0204",
+    "job_id":"JOB001",
+    "applied_date":"2026-11-13",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0205_1",
+    "candidate_id":"CAND0205",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-09",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0206_1",
+    "candidate_id":"CAND0206",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-28",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0206_2",
+    "candidate_id":"CAND0206",
+    "job_id":"JOB017",
+    "applied_date":"2026-10-28",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0207_1",
+    "candidate_id":"CAND0207",
+    "job_id":"JOB016",
+    "applied_date":"2026-11-12",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0208_1",
+    "candidate_id":"CAND0208",
+    "job_id":"JOB011",
+    "applied_date":"2026-11-02",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0208_2",
+    "candidate_id":"CAND0208",
+    "job_id":"JOB007",
+    "applied_date":"2026-11-02",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0209_1",
+    "candidate_id":"CAND0209",
+    "job_id":"JOB004",
+    "applied_date":"2026-11-15",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0210_1",
+    "candidate_id":"CAND0210",
+    "job_id":"JOB020",
+    "applied_date":"2026-10-13",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0211_1",
+    "candidate_id":"CAND0211",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-19",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0211_2",
+    "candidate_id":"CAND0211",
+    "job_id":"JOB011",
+    "applied_date":"2026-10-19",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0212_1",
+    "candidate_id":"CAND0212",
+    "job_id":"JOB019",
+    "applied_date":"2026-10-26",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0213_1",
+    "candidate_id":"CAND0213",
+    "job_id":"JOB008",
+    "applied_date":"2026-11-09",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0214_1",
+    "candidate_id":"CAND0214",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-23",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0214_2",
+    "candidate_id":"CAND0214",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-23",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0215_1",
+    "candidate_id":"CAND0215",
+    "job_id":"JOB010",
+    "applied_date":"2026-11-07",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0216_1",
+    "candidate_id":"CAND0216",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-02",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0217_1",
+    "candidate_id":"CAND0217",
+    "job_id":"JOB005",
+    "applied_date":"2026-11-13",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0217_2",
+    "candidate_id":"CAND0217",
+    "job_id":"JOB017",
+    "applied_date":"2026-11-13",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0218_1",
+    "candidate_id":"CAND0218",
+    "job_id":"JOB005",
+    "applied_date":"2026-11-03",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0218_2",
+    "candidate_id":"CAND0218",
+    "job_id":"JOB016",
+    "applied_date":"2026-11-03",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0219_1",
+    "candidate_id":"CAND0219",
+    "job_id":"JOB009",
+    "applied_date":"2026-10-08",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0220_1",
+    "candidate_id":"CAND0220",
+    "job_id":"JOB011",
+    "applied_date":"2026-10-11",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0221_1",
+    "candidate_id":"CAND0221",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-06",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0222_1",
+    "candidate_id":"CAND0222",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-13",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0223_1",
+    "candidate_id":"CAND0223",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-05",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0224_1",
+    "candidate_id":"CAND0224",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-25",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0225_1",
+    "candidate_id":"CAND0225",
+    "job_id":"JOB011",
+    "applied_date":"2026-11-07",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0226_1",
+    "candidate_id":"CAND0226",
+    "job_id":"JOB006",
+    "applied_date":"2026-11-04",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0227_1",
+    "candidate_id":"CAND0227",
+    "job_id":"JOB006",
+    "applied_date":"2026-11-10",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0228_1",
+    "candidate_id":"CAND0228",
+    "job_id":"JOB008",
+    "applied_date":"2026-11-15",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0229_1",
+    "candidate_id":"CAND0229",
+    "job_id":"JOB011",
+    "applied_date":"2026-10-11",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0230_1",
+    "candidate_id":"CAND0230",
+    "job_id":"JOB017",
+    "applied_date":"2026-10-04",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0231_1",
+    "candidate_id":"CAND0231",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-07",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0232_1",
+    "candidate_id":"CAND0232",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-20",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0233_1",
+    "candidate_id":"CAND0233",
+    "job_id":"JOB001",
+    "applied_date":"2026-10-11",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0234_1",
+    "candidate_id":"CAND0234",
+    "job_id":"JOB002",
+    "applied_date":"2026-11-07",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0235_1",
+    "candidate_id":"CAND0235",
+    "job_id":"JOB003",
+    "applied_date":"2026-10-30",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0236_1",
+    "candidate_id":"CAND0236",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-01",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0236_2",
+    "candidate_id":"CAND0236",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-01",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0237_1",
+    "candidate_id":"CAND0237",
+    "job_id":"JOB008",
+    "applied_date":"2026-11-07",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0238_1",
+    "candidate_id":"CAND0238",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-04",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0238_2",
+    "candidate_id":"CAND0238",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-04",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0239_1",
+    "candidate_id":"CAND0239",
+    "job_id":"JOB004",
+    "applied_date":"2026-11-06",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0239_2",
+    "candidate_id":"CAND0239",
+    "job_id":"JOB016",
+    "applied_date":"2026-11-06",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0240_1",
+    "candidate_id":"CAND0240",
+    "job_id":"JOB011",
+    "applied_date":"2026-11-09",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0241_1",
+    "candidate_id":"CAND0241",
+    "job_id":"JOB010",
+    "applied_date":"2026-11-01",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0242_1",
+    "candidate_id":"CAND0242",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-20",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0243_1",
+    "candidate_id":"CAND0243",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-03",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0244_1",
+    "candidate_id":"CAND0244",
+    "job_id":"JOB007",
+    "applied_date":"2026-11-09",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0245_1",
+    "candidate_id":"CAND0245",
+    "job_id":"JOB013",
+    "applied_date":"2026-11-07",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0246_1",
+    "candidate_id":"CAND0246",
+    "job_id":"JOB017",
+    "applied_date":"2026-10-27",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0246_2",
+    "candidate_id":"CAND0246",
+    "job_id":"JOB012",
+    "applied_date":"2026-10-27",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0247_1",
+    "candidate_id":"CAND0247",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-06",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0248_1",
+    "candidate_id":"CAND0248",
+    "job_id":"JOB019",
+    "applied_date":"2026-11-01",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0249_1",
+    "candidate_id":"CAND0249",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-10",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0250_1",
+    "candidate_id":"CAND0250",
+    "job_id":"JOB020",
+    "applied_date":"2026-10-10",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0251_1",
+    "candidate_id":"CAND0251",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-14",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0252_1",
+    "candidate_id":"CAND0252",
+    "job_id":"JOB017",
+    "applied_date":"2026-11-11",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0253_1",
+    "candidate_id":"CAND0253",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-04",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0254_1",
+    "candidate_id":"CAND0254",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-31",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0254_2",
+    "candidate_id":"CAND0254",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-31",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0255_1",
+    "candidate_id":"CAND0255",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-01",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0256_1",
+    "candidate_id":"CAND0256",
+    "job_id":"JOB018",
+    "applied_date":"2026-11-06",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0256_2",
+    "candidate_id":"CAND0256",
+    "job_id":"JOB006",
+    "applied_date":"2026-11-06",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0257_1",
+    "candidate_id":"CAND0257",
+    "job_id":"JOB012",
+    "applied_date":"2026-10-02",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0258_1",
+    "candidate_id":"CAND0258",
+    "job_id":"JOB019",
+    "applied_date":"2026-10-08",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0259_1",
+    "candidate_id":"CAND0259",
+    "job_id":"JOB007",
+    "applied_date":"2026-11-10",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0259_2",
+    "candidate_id":"CAND0259",
+    "job_id":"JOB015",
+    "applied_date":"2026-11-10",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0260_1",
+    "candidate_id":"CAND0260",
+    "job_id":"JOB016",
+    "applied_date":"2026-11-04",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0261_1",
+    "candidate_id":"CAND0261",
+    "job_id":"JOB016",
+    "applied_date":"2026-11-13",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0262_1",
+    "candidate_id":"CAND0262",
+    "job_id":"JOB009",
+    "applied_date":"2026-11-15",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0262_2",
+    "candidate_id":"CAND0262",
+    "job_id":"JOB016",
+    "applied_date":"2026-11-15",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0263_1",
+    "candidate_id":"CAND0263",
+    "job_id":"JOB010",
+    "applied_date":"2026-11-14",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0264_1",
+    "candidate_id":"CAND0264",
+    "job_id":"JOB017",
+    "applied_date":"2026-10-05",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0265_1",
+    "candidate_id":"CAND0265",
+    "job_id":"JOB004",
+    "applied_date":"2026-11-10",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0266_1",
+    "candidate_id":"CAND0266",
+    "job_id":"JOB018",
+    "applied_date":"2026-11-09",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0267_1",
+    "candidate_id":"CAND0267",
+    "job_id":"JOB005",
+    "applied_date":"2026-11-07",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0267_2",
+    "candidate_id":"CAND0267",
+    "job_id":"JOB017",
+    "applied_date":"2026-11-07",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0268_1",
+    "candidate_id":"CAND0268",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-22",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0269_1",
+    "candidate_id":"CAND0269",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-29",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0269_2",
+    "candidate_id":"CAND0269",
+    "job_id":"JOB009",
+    "applied_date":"2026-10-29",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0270_1",
+    "candidate_id":"CAND0270",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-08",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0271_1",
+    "candidate_id":"CAND0271",
+    "job_id":"JOB019",
+    "applied_date":"2026-10-31",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0272_1",
+    "candidate_id":"CAND0272",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-28",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0272_2",
+    "candidate_id":"CAND0272",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-28",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0273_1",
+    "candidate_id":"CAND0273",
+    "job_id":"JOB008",
+    "applied_date":"2026-11-02",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0274_1",
+    "candidate_id":"CAND0274",
+    "job_id":"JOB013",
+    "applied_date":"2026-11-11",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0275_1",
+    "candidate_id":"CAND0275",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-09",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0276_1",
+    "candidate_id":"CAND0276",
+    "job_id":"JOB009",
+    "applied_date":"2026-10-22",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0277_1",
+    "candidate_id":"CAND0277",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-31",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0278_1",
+    "candidate_id":"CAND0278",
+    "job_id":"JOB020",
+    "applied_date":"2026-11-06",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0278_2",
+    "candidate_id":"CAND0278",
+    "job_id":"JOB005",
+    "applied_date":"2026-11-06",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0279_1",
+    "candidate_id":"CAND0279",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-14",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0279_2",
+    "candidate_id":"CAND0279",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-14",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0280_1",
+    "candidate_id":"CAND0280",
+    "job_id":"JOB007",
+    "applied_date":"2026-11-15",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0281_1",
+    "candidate_id":"CAND0281",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-14",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0282_1",
+    "candidate_id":"CAND0282",
+    "job_id":"JOB018",
+    "applied_date":"2026-11-12",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0282_2",
+    "candidate_id":"CAND0282",
+    "job_id":"JOB020",
+    "applied_date":"2026-11-12",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0283_1",
+    "candidate_id":"CAND0283",
+    "job_id":"JOB020",
+    "applied_date":"2026-11-11",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0284_1",
+    "candidate_id":"CAND0284",
+    "job_id":"JOB006",
+    "applied_date":"2026-11-07",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0284_2",
+    "candidate_id":"CAND0284",
+    "job_id":"JOB012",
+    "applied_date":"2026-11-07",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0285_1",
+    "candidate_id":"CAND0285",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-21",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0286_1",
+    "candidate_id":"CAND0286",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-06",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0287_1",
+    "candidate_id":"CAND0287",
+    "job_id":"JOB013",
+    "applied_date":"2026-11-02",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0288_1",
+    "candidate_id":"CAND0288",
+    "job_id":"JOB014",
+    "applied_date":"2026-11-01",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0289_1",
+    "candidate_id":"CAND0289",
+    "job_id":"JOB009",
+    "applied_date":"2026-11-13",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0289_2",
+    "candidate_id":"CAND0289",
+    "job_id":"JOB014",
+    "applied_date":"2026-11-13",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0290_1",
+    "candidate_id":"CAND0290",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-01",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0290_2",
+    "candidate_id":"CAND0290",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-01",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0291_1",
+    "candidate_id":"CAND0291",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-06",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0291_2",
+    "candidate_id":"CAND0291",
+    "job_id":"JOB001",
+    "applied_date":"2026-10-06",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0292_1",
+    "candidate_id":"CAND0292",
+    "job_id":"JOB007",
+    "applied_date":"2026-11-12",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0293_1",
+    "candidate_id":"CAND0293",
+    "job_id":"JOB020",
+    "applied_date":"2026-11-09",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0294_1",
+    "candidate_id":"CAND0294",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-11",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0295_1",
+    "candidate_id":"CAND0295",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-21",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0296_1",
+    "candidate_id":"CAND0296",
+    "job_id":"JOB007",
+    "applied_date":"2026-11-14",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0297_1",
+    "candidate_id":"CAND0297",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-05",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0298_1",
+    "candidate_id":"CAND0298",
+    "job_id":"JOB019",
+    "applied_date":"2026-11-13",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0299_1",
+    "candidate_id":"CAND0299",
+    "job_id":"JOB004",
+    "applied_date":"2026-11-12",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0299_2",
+    "candidate_id":"CAND0299",
+    "job_id":"JOB017",
+    "applied_date":"2026-11-12",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0300_1",
+    "candidate_id":"CAND0300",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-12",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0301_1",
+    "candidate_id":"CAND0301",
+    "job_id":"JOB010",
+    "applied_date":"2026-11-02",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0302_1",
+    "candidate_id":"CAND0302",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-28",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0303_1",
+    "candidate_id":"CAND0303",
+    "job_id":"JOB003",
+    "applied_date":"2026-10-08",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0304_1",
+    "candidate_id":"CAND0304",
+    "job_id":"JOB012",
+    "applied_date":"2026-11-14",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0305_1",
+    "candidate_id":"CAND0305",
+    "job_id":"JOB009",
+    "applied_date":"2026-11-13",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0306_1",
+    "candidate_id":"CAND0306",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-09",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0307_1",
+    "candidate_id":"CAND0307",
+    "job_id":"JOB019",
+    "applied_date":"2026-11-13",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0308_1",
+    "candidate_id":"CAND0308",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-26",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0309_1",
+    "candidate_id":"CAND0309",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-23",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0310_1",
+    "candidate_id":"CAND0310",
+    "job_id":"JOB015",
+    "applied_date":"2026-11-02",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0311_1",
+    "candidate_id":"CAND0311",
+    "job_id":"JOB003",
+    "applied_date":"2026-11-14",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0312_1",
+    "candidate_id":"CAND0312",
+    "job_id":"JOB012",
+    "applied_date":"2026-10-28",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0313_1",
+    "candidate_id":"CAND0313",
+    "job_id":"JOB001",
+    "applied_date":"2026-10-17",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0314_1",
+    "candidate_id":"CAND0314",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-05",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0315_1",
+    "candidate_id":"CAND0315",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-04",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0316_1",
+    "candidate_id":"CAND0316",
+    "job_id":"JOB011",
+    "applied_date":"2026-11-15",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0317_1",
+    "candidate_id":"CAND0317",
+    "job_id":"JOB020",
+    "applied_date":"2026-10-17",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0318_1",
+    "candidate_id":"CAND0318",
+    "job_id":"JOB017",
+    "applied_date":"2026-10-18",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0319_1",
+    "candidate_id":"CAND0319",
+    "job_id":"JOB003",
+    "applied_date":"2026-11-03",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0319_2",
+    "candidate_id":"CAND0319",
+    "job_id":"JOB001",
+    "applied_date":"2026-11-03",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0320_1",
+    "candidate_id":"CAND0320",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-22",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0321_1",
+    "candidate_id":"CAND0321",
+    "job_id":"JOB011",
+    "applied_date":"2026-10-08",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0322_1",
+    "candidate_id":"CAND0322",
+    "job_id":"JOB011",
+    "applied_date":"2026-11-01",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0323_1",
+    "candidate_id":"CAND0323",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-22",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0324_1",
+    "candidate_id":"CAND0324",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-23",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0324_2",
+    "candidate_id":"CAND0324",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-23",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0325_1",
+    "candidate_id":"CAND0325",
+    "job_id":"JOB004",
+    "applied_date":"2026-11-06",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0325_2",
+    "candidate_id":"CAND0325",
+    "job_id":"JOB017",
+    "applied_date":"2026-11-06",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0326_1",
+    "candidate_id":"CAND0326",
+    "job_id":"JOB019",
+    "applied_date":"2026-10-06",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0327_1",
+    "candidate_id":"CAND0327",
+    "job_id":"JOB003",
+    "applied_date":"2026-10-11",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0327_2",
+    "candidate_id":"CAND0327",
+    "job_id":"JOB001",
+    "applied_date":"2026-10-11",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0328_1",
+    "candidate_id":"CAND0328",
+    "job_id":"JOB006",
+    "applied_date":"2026-11-13",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0329_1",
+    "candidate_id":"CAND0329",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-03",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0330_1",
+    "candidate_id":"CAND0330",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-09",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0331_1",
+    "candidate_id":"CAND0331",
+    "job_id":"JOB001",
+    "applied_date":"2026-10-05",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0332_1",
+    "candidate_id":"CAND0332",
+    "job_id":"JOB006",
+    "applied_date":"2026-11-06",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0333_1",
+    "candidate_id":"CAND0333",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-27",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0334_1",
+    "candidate_id":"CAND0334",
+    "job_id":"JOB003",
+    "applied_date":"2026-11-10",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0335_1",
+    "candidate_id":"CAND0335",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-22",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0336_1",
+    "candidate_id":"CAND0336",
+    "job_id":"JOB002",
+    "applied_date":"2026-11-12",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0337_1",
+    "candidate_id":"CAND0337",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-16",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0338_1",
+    "candidate_id":"CAND0338",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-25",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0339_1",
+    "candidate_id":"CAND0339",
+    "job_id":"JOB003",
+    "applied_date":"2026-10-19",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0339_2",
+    "candidate_id":"CAND0339",
+    "job_id":"JOB009",
+    "applied_date":"2026-10-19",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0340_1",
+    "candidate_id":"CAND0340",
+    "job_id":"JOB012",
+    "applied_date":"2026-10-31",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0340_2",
+    "candidate_id":"CAND0340",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-31",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0341_1",
+    "candidate_id":"CAND0341",
+    "job_id":"JOB019",
+    "applied_date":"2026-11-01",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0342_1",
+    "candidate_id":"CAND0342",
+    "job_id":"JOB011",
+    "applied_date":"2026-11-11",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0342_2",
+    "candidate_id":"CAND0342",
+    "job_id":"JOB015",
+    "applied_date":"2026-11-11",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0343_1",
+    "candidate_id":"CAND0343",
+    "job_id":"JOB011",
+    "applied_date":"2026-11-06",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0343_2",
+    "candidate_id":"CAND0343",
+    "job_id":"JOB014",
+    "applied_date":"2026-11-06",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0344_1",
+    "candidate_id":"CAND0344",
+    "job_id":"JOB017",
+    "applied_date":"2026-11-11",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0345_1",
+    "candidate_id":"CAND0345",
+    "job_id":"JOB011",
+    "applied_date":"2026-10-11",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0345_2",
+    "candidate_id":"CAND0345",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-11",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0346_1",
+    "candidate_id":"CAND0346",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-18",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0347_1",
+    "candidate_id":"CAND0347",
+    "job_id":"JOB009",
+    "applied_date":"2026-11-02",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0347_2",
+    "candidate_id":"CAND0347",
+    "job_id":"JOB010",
+    "applied_date":"2026-11-02",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0348_1",
+    "candidate_id":"CAND0348",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-10",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0349_1",
+    "candidate_id":"CAND0349",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-07",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0350_1",
+    "candidate_id":"CAND0350",
+    "job_id":"JOB017",
+    "applied_date":"2026-10-28",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0350_2",
+    "candidate_id":"CAND0350",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-28",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0351_1",
+    "candidate_id":"CAND0351",
+    "job_id":"JOB005",
+    "applied_date":"2026-11-04",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0351_2",
+    "candidate_id":"CAND0351",
+    "job_id":"JOB014",
+    "applied_date":"2026-11-04",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0352_1",
+    "candidate_id":"CAND0352",
+    "job_id":"JOB009",
+    "applied_date":"2026-10-23",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0352_2",
+    "candidate_id":"CAND0352",
+    "job_id":"JOB001",
+    "applied_date":"2026-10-23",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0353_1",
+    "candidate_id":"CAND0353",
+    "job_id":"JOB005",
+    "applied_date":"2026-11-07",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0354_1",
+    "candidate_id":"CAND0354",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-23",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0354_2",
+    "candidate_id":"CAND0354",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-23",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0355_1",
+    "candidate_id":"CAND0355",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-28",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0356_1",
+    "candidate_id":"CAND0356",
+    "job_id":"JOB005",
+    "applied_date":"2026-11-11",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0356_2",
+    "candidate_id":"CAND0356",
+    "job_id":"JOB015",
+    "applied_date":"2026-11-11",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0357_1",
+    "candidate_id":"CAND0357",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-31",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0358_1",
+    "candidate_id":"CAND0358",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-25",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0358_2",
+    "candidate_id":"CAND0358",
+    "job_id":"JOB012",
+    "applied_date":"2026-10-25",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0359_1",
+    "candidate_id":"CAND0359",
+    "job_id":"JOB011",
+    "applied_date":"2026-10-10",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0360_1",
+    "candidate_id":"CAND0360",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-16",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0361_1",
+    "candidate_id":"CAND0361",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-11",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0362_1",
+    "candidate_id":"CAND0362",
+    "job_id":"JOB003",
+    "applied_date":"2026-11-10",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0363_1",
+    "candidate_id":"CAND0363",
+    "job_id":"JOB018",
+    "applied_date":"2026-11-02",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0363_2",
+    "candidate_id":"CAND0363",
+    "job_id":"JOB004",
+    "applied_date":"2026-11-02",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0364_1",
+    "candidate_id":"CAND0364",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-07",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0365_1",
+    "candidate_id":"CAND0365",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-28",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0365_2",
+    "candidate_id":"CAND0365",
+    "job_id":"JOB017",
+    "applied_date":"2026-10-28",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0366_1",
+    "candidate_id":"CAND0366",
+    "job_id":"JOB009",
+    "applied_date":"2026-10-05",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0366_2",
+    "candidate_id":"CAND0366",
+    "job_id":"JOB019",
+    "applied_date":"2026-10-05",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0367_1",
+    "candidate_id":"CAND0367",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-03",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0368_1",
+    "candidate_id":"CAND0368",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-17",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0369_1",
+    "candidate_id":"CAND0369",
+    "job_id":"JOB015",
+    "applied_date":"2026-11-04",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0370_1",
+    "candidate_id":"CAND0370",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-06",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0370_2",
+    "candidate_id":"CAND0370",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-06",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0371_1",
+    "candidate_id":"CAND0371",
+    "job_id":"JOB004",
+    "applied_date":"2026-11-02",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0372_1",
+    "candidate_id":"CAND0372",
+    "job_id":"JOB003",
+    "applied_date":"2026-10-10",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0372_2",
+    "candidate_id":"CAND0372",
+    "job_id":"JOB017",
+    "applied_date":"2026-10-10",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0373_1",
+    "candidate_id":"CAND0373",
+    "job_id":"JOB001",
+    "applied_date":"2026-10-21",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0374_1",
+    "candidate_id":"CAND0374",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-21",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0374_2",
+    "candidate_id":"CAND0374",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-21",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0375_1",
+    "candidate_id":"CAND0375",
+    "job_id":"JOB009",
+    "applied_date":"2026-10-16",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0376_1",
+    "candidate_id":"CAND0376",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-12",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0377_1",
+    "candidate_id":"CAND0377",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-19",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0378_1",
+    "candidate_id":"CAND0378",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-19",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0379_1",
+    "candidate_id":"CAND0379",
+    "job_id":"JOB002",
+    "applied_date":"2026-11-03",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0380_1",
+    "candidate_id":"CAND0380",
+    "job_id":"JOB011",
+    "applied_date":"2026-10-27",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0381_1",
+    "candidate_id":"CAND0381",
+    "job_id":"JOB009",
+    "applied_date":"2026-10-30",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0381_2",
+    "candidate_id":"CAND0381",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-30",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0382_1",
+    "candidate_id":"CAND0382",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-27",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0383_1",
+    "candidate_id":"CAND0383",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-19",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0383_2",
+    "candidate_id":"CAND0383",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-19",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0384_1",
+    "candidate_id":"CAND0384",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-13",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0385_1",
+    "candidate_id":"CAND0385",
+    "job_id":"JOB013",
+    "applied_date":"2026-11-06",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0386_1",
+    "candidate_id":"CAND0386",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-21",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0387_1",
+    "candidate_id":"CAND0387",
+    "job_id":"JOB017",
+    "applied_date":"2026-11-10",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0387_2",
+    "candidate_id":"CAND0387",
+    "job_id":"JOB007",
+    "applied_date":"2026-11-10",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0388_1",
+    "candidate_id":"CAND0388",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-20",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0388_2",
+    "candidate_id":"CAND0388",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-20",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0389_1",
+    "candidate_id":"CAND0389",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-07",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0390_1",
+    "candidate_id":"CAND0390",
+    "job_id":"JOB012",
+    "applied_date":"2026-11-02",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0391_1",
+    "candidate_id":"CAND0391",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-30",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0392_1",
+    "candidate_id":"CAND0392",
+    "job_id":"JOB001",
+    "applied_date":"2026-10-18",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0392_2",
+    "candidate_id":"CAND0392",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-18",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0393_1",
+    "candidate_id":"CAND0393",
+    "job_id":"JOB007",
+    "applied_date":"2026-11-13",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0394_1",
+    "candidate_id":"CAND0394",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-23",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0395_1",
+    "candidate_id":"CAND0395",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-27",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0396_1",
+    "candidate_id":"CAND0396",
+    "job_id":"JOB011",
+    "applied_date":"2026-11-14",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0397_1",
+    "candidate_id":"CAND0397",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-11",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0398_1",
+    "candidate_id":"CAND0398",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-11",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0399_1",
+    "candidate_id":"CAND0399",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-20",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0399_2",
+    "candidate_id":"CAND0399",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-20",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0400_1",
+    "candidate_id":"CAND0400",
+    "job_id":"JOB007",
+    "applied_date":"2026-11-08",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0401_1",
+    "candidate_id":"CAND0401",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-20",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0401_2",
+    "candidate_id":"CAND0401",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-20",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0402_1",
+    "candidate_id":"CAND0402",
+    "job_id":"JOB020",
+    "applied_date":"2026-10-31",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0402_2",
+    "candidate_id":"CAND0402",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-31",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0403_1",
+    "candidate_id":"CAND0403",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-12",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0403_2",
+    "candidate_id":"CAND0403",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-12",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0404_1",
+    "candidate_id":"CAND0404",
+    "job_id":"JOB015",
+    "applied_date":"2026-11-02",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0405_1",
+    "candidate_id":"CAND0405",
+    "job_id":"JOB010",
+    "applied_date":"2026-11-14",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0406_1",
+    "candidate_id":"CAND0406",
+    "job_id":"JOB020",
+    "applied_date":"2026-10-01",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0407_1",
+    "candidate_id":"CAND0407",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-27",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0408_1",
+    "candidate_id":"CAND0408",
+    "job_id":"JOB015",
+    "applied_date":"2026-11-01",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0409_1",
+    "candidate_id":"CAND0409",
+    "job_id":"JOB001",
+    "applied_date":"2026-11-09",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0410_1",
+    "candidate_id":"CAND0410",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-29",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0410_2",
+    "candidate_id":"CAND0410",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-29",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0411_1",
+    "candidate_id":"CAND0411",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-24",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0411_2",
+    "candidate_id":"CAND0411",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-24",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0412_1",
+    "candidate_id":"CAND0412",
+    "job_id":"JOB012",
+    "applied_date":"2026-10-19",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0413_1",
+    "candidate_id":"CAND0413",
+    "job_id":"JOB003",
+    "applied_date":"2026-10-17",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0414_1",
+    "candidate_id":"CAND0414",
+    "job_id":"JOB010",
+    "applied_date":"2026-11-10",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0415_1",
+    "candidate_id":"CAND0415",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-12",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0416_1",
+    "candidate_id":"CAND0416",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-01",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0417_1",
+    "candidate_id":"CAND0417",
+    "job_id":"JOB012",
+    "applied_date":"2026-10-05",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0418_1",
+    "candidate_id":"CAND0418",
+    "job_id":"JOB013",
+    "applied_date":"2026-11-11",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0419_1",
+    "candidate_id":"CAND0419",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-28",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0420_1",
+    "candidate_id":"CAND0420",
+    "job_id":"JOB019",
+    "applied_date":"2026-10-31",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0420_2",
+    "candidate_id":"CAND0420",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-31",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0421_1",
+    "candidate_id":"CAND0421",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-17",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0422_1",
+    "candidate_id":"CAND0422",
+    "job_id":"JOB014",
+    "applied_date":"2026-11-06",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0423_1",
+    "candidate_id":"CAND0423",
+    "job_id":"JOB007",
+    "applied_date":"2026-11-13",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0424_1",
+    "candidate_id":"CAND0424",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-09",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0424_2",
+    "candidate_id":"CAND0424",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-09",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0425_1",
+    "candidate_id":"CAND0425",
+    "job_id":"JOB019",
+    "applied_date":"2026-11-02",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0426_1",
+    "candidate_id":"CAND0426",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-03",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0427_1",
+    "candidate_id":"CAND0427",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-22",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0427_2",
+    "candidate_id":"CAND0427",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-22",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0428_1",
+    "candidate_id":"CAND0428",
+    "job_id":"JOB001",
+    "applied_date":"2026-11-02",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0429_1",
+    "candidate_id":"CAND0429",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-12",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0429_2",
+    "candidate_id":"CAND0429",
+    "job_id":"JOB019",
+    "applied_date":"2026-10-12",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0430_1",
+    "candidate_id":"CAND0430",
+    "job_id":"JOB005",
+    "applied_date":"2026-11-01",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0431_1",
+    "candidate_id":"CAND0431",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-23",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0432_1",
+    "candidate_id":"CAND0432",
+    "job_id":"JOB012",
+    "applied_date":"2026-10-31",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0433_1",
+    "candidate_id":"CAND0433",
+    "job_id":"JOB020",
+    "applied_date":"2026-11-07",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0433_2",
+    "candidate_id":"CAND0433",
+    "job_id":"JOB019",
+    "applied_date":"2026-11-07",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0434_1",
+    "candidate_id":"CAND0434",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-28",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0435_1",
+    "candidate_id":"CAND0435",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-06",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0436_1",
+    "candidate_id":"CAND0436",
+    "job_id":"JOB015",
+    "applied_date":"2026-11-11",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0437_1",
+    "candidate_id":"CAND0437",
+    "job_id":"JOB014",
+    "applied_date":"2026-11-05",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0438_1",
+    "candidate_id":"CAND0438",
+    "job_id":"JOB015",
+    "applied_date":"2026-11-02",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0439_1",
+    "candidate_id":"CAND0439",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-02",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0439_2",
+    "candidate_id":"CAND0439",
+    "job_id":"JOB001",
+    "applied_date":"2026-10-02",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0440_1",
+    "candidate_id":"CAND0440",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-16",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0441_1",
+    "candidate_id":"CAND0441",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-02",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0442_1",
+    "candidate_id":"CAND0442",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-05",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0443_1",
+    "candidate_id":"CAND0443",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-17",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0444_1",
+    "candidate_id":"CAND0444",
+    "job_id":"JOB002",
+    "applied_date":"2026-10-13",
+    "application_status":"Applied",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0445_1",
+    "candidate_id":"CAND0445",
+    "job_id":"JOB013",
+    "applied_date":"2026-11-05",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0446_1",
+    "candidate_id":"CAND0446",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-06",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0447_1",
+    "candidate_id":"CAND0447",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-13",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0448_1",
+    "candidate_id":"CAND0448",
+    "job_id":"JOB020",
+    "applied_date":"2026-11-12",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0449_1",
+    "candidate_id":"CAND0449",
+    "job_id":"JOB020",
+    "applied_date":"2026-11-10",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0450_1",
+    "candidate_id":"CAND0450",
+    "job_id":"JOB005",
+    "applied_date":"2026-11-03",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0451_1",
+    "candidate_id":"CAND0451",
+    "job_id":"JOB012",
+    "applied_date":"2026-10-13",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0452_1",
+    "candidate_id":"CAND0452",
+    "job_id":"JOB001",
+    "applied_date":"2026-10-27",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0452_2",
+    "candidate_id":"CAND0452",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-27",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0453_1",
+    "candidate_id":"CAND0453",
+    "job_id":"JOB001",
+    "applied_date":"2026-11-01",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0454_1",
+    "candidate_id":"CAND0454",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-25",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0455_1",
+    "candidate_id":"CAND0455",
+    "job_id":"JOB005",
+    "applied_date":"2026-10-14",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0456_1",
+    "candidate_id":"CAND0456",
+    "job_id":"JOB004",
+    "applied_date":"2026-10-06",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0457_1",
+    "candidate_id":"CAND0457",
+    "job_id":"JOB001",
+    "applied_date":"2026-10-11",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0457_2",
+    "candidate_id":"CAND0457",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-11",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0458_1",
+    "candidate_id":"CAND0458",
+    "job_id":"JOB009",
+    "applied_date":"2026-10-19",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0459_1",
+    "candidate_id":"CAND0459",
+    "job_id":"JOB001",
+    "applied_date":"2026-11-12",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0460_1",
+    "candidate_id":"CAND0460",
+    "job_id":"JOB001",
+    "applied_date":"2026-11-05",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0461_1",
+    "candidate_id":"CAND0461",
+    "job_id":"JOB018",
+    "applied_date":"2026-11-12",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0461_2",
+    "candidate_id":"CAND0461",
+    "job_id":"JOB002",
+    "applied_date":"2026-11-12",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0462_1",
+    "candidate_id":"CAND0462",
+    "job_id":"JOB016",
+    "applied_date":"2026-11-04",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0463_1",
+    "candidate_id":"CAND0463",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-05",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0464_1",
+    "candidate_id":"CAND0464",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-26",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0465_1",
+    "candidate_id":"CAND0465",
+    "job_id":"JOB003",
+    "applied_date":"2026-10-26",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0466_1",
+    "candidate_id":"CAND0466",
+    "job_id":"JOB011",
+    "applied_date":"2026-10-28",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0466_2",
+    "candidate_id":"CAND0466",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-28",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0467_1",
+    "candidate_id":"CAND0467",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-15",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0468_1",
+    "candidate_id":"CAND0468",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-16",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0469_1",
+    "candidate_id":"CAND0469",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-10",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0469_2",
+    "candidate_id":"CAND0469",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-10",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0470_1",
+    "candidate_id":"CAND0470",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-25",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0471_1",
+    "candidate_id":"CAND0471",
+    "job_id":"JOB019",
+    "applied_date":"2026-10-23",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0472_1",
+    "candidate_id":"CAND0472",
+    "job_id":"JOB012",
+    "applied_date":"2026-10-03",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0473_1",
+    "candidate_id":"CAND0473",
+    "job_id":"JOB009",
+    "applied_date":"2026-10-10",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0474_1",
+    "candidate_id":"CAND0474",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-13",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0475_1",
+    "candidate_id":"CAND0475",
+    "job_id":"JOB012",
+    "applied_date":"2026-11-08",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0476_1",
+    "candidate_id":"CAND0476",
+    "job_id":"JOB017",
+    "applied_date":"2026-10-20",
+    "application_status":"Applied",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0477_1",
+    "candidate_id":"CAND0477",
+    "job_id":"JOB018",
+    "applied_date":"2026-10-27",
+    "application_status":"Under Review",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0478_1",
+    "candidate_id":"CAND0478",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-24",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0479_1",
+    "candidate_id":"CAND0479",
+    "job_id":"JOB006",
+    "applied_date":"2026-10-03",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0480_1",
+    "candidate_id":"CAND0480",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-23",
+    "application_status":"Shortlisted",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0480_2",
+    "candidate_id":"CAND0480",
+    "job_id":"JOB009",
+    "applied_date":"2026-10-23",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0481_1",
+    "candidate_id":"CAND0481",
+    "job_id":"JOB001",
+    "applied_date":"2026-11-14",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0482_1",
+    "candidate_id":"CAND0482",
+    "job_id":"JOB013",
+    "applied_date":"2026-10-31",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0482_2",
+    "candidate_id":"CAND0482",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-31",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0483_1",
+    "candidate_id":"CAND0483",
+    "job_id":"JOB009",
+    "applied_date":"2026-11-11",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0484_1",
+    "candidate_id":"CAND0484",
+    "job_id":"JOB003",
+    "applied_date":"2026-10-15",
+    "application_status":"Shortlisted",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0485_1",
+    "candidate_id":"CAND0485",
+    "job_id":"JOB015",
+    "applied_date":"2026-10-08",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0486_1",
+    "candidate_id":"CAND0486",
+    "job_id":"JOB010",
+    "applied_date":"2026-10-04",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0487_1",
+    "candidate_id":"CAND0487",
+    "job_id":"JOB016",
+    "applied_date":"2026-11-02",
+    "application_status":"Applied",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0488_1",
+    "candidate_id":"CAND0488",
+    "job_id":"JOB014",
+    "applied_date":"2026-11-03",
+    "application_status":"Shortlisted",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0489_1",
+    "candidate_id":"CAND0489",
+    "job_id":"JOB014",
+    "applied_date":"2026-10-18",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Job Portal"
+  },
+  {
+    "application_id":"APP0490_1",
+    "candidate_id":"CAND0490",
+    "job_id":"JOB003",
+    "applied_date":"2026-10-14",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0491_1",
+    "candidate_id":"CAND0491",
+    "job_id":"JOB017",
+    "applied_date":"2026-10-25",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0492_1",
+    "candidate_id":"CAND0492",
+    "job_id":"JOB020",
+    "applied_date":"2026-10-15",
+    "application_status":"Shortlisted",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0492_2",
+    "candidate_id":"CAND0492",
+    "job_id":"JOB007",
+    "applied_date":"2026-10-15",
+    "application_status":"Applied",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0493_1",
+    "candidate_id":"CAND0493",
+    "job_id":"JOB020",
+    "applied_date":"2026-11-12",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0494_1",
+    "candidate_id":"CAND0494",
+    "job_id":"JOB015",
+    "applied_date":"2026-11-08",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0495_1",
+    "candidate_id":"CAND0495",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-28",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0496_1",
+    "candidate_id":"CAND0496",
+    "job_id":"JOB017",
+    "applied_date":"2026-10-29",
+    "application_status":"Under Review",
+    "source_channel":"Campus Drive"
+  },
+  {
+    "application_id":"APP0497_1",
+    "candidate_id":"CAND0497",
+    "job_id":"JOB008",
+    "applied_date":"2026-11-04",
+    "application_status":"Under Review",
+    "source_channel":"Company Website"
+  },
+  {
+    "application_id":"APP0498_1",
+    "candidate_id":"CAND0498",
+    "job_id":"JOB016",
+    "applied_date":"2026-10-12",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0499_1",
+    "candidate_id":"CAND0499",
+    "job_id":"JOB008",
+    "applied_date":"2026-10-24",
+    "application_status":"Under Review",
+    "source_channel":"Referral"
+  },
+  {
+    "application_id":"APP0500_1",
+    "candidate_id":"CAND0500",
+    "job_id":"JOB011",
+    "applied_date":"2026-11-15",
+    "application_status":"Interview Scheduled",
+    "source_channel":"Company Website"
+  }
+]

@@ -1,0 +1,50 @@
+skill_id,skill_name,occupation,skill_type,source
+SK0001,Python,Python Developer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0002,SQL,Python Developer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0003,Flask,Python Developer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0004,FastAPI,Python Developer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0005,Pandas,Python Developer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0006,Git,Python Developer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0007,Java,Java Developer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0008,SQL,Java Developer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0009,Spring Boot,Java Developer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0010,REST API,Java Developer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0011,Git,Java Developer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0012,Docker,Java Developer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0013,HTML,Frontend Developer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0014,CSS,Frontend Developer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0015,JavaScript,Frontend Developer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0016,React,Frontend Developer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0017,TypeScript,Frontend Developer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0018,Tailwind CSS,Frontend Developer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0019,Git,Frontend Developer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0020,SQL,Data Analyst,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0021,Excel,Data Analyst,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0022,Python,Data Analyst,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0023,Power BI,Data Analyst,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0024,Tableau,Data Analyst,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0025,Pandas,Data Analyst,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0026,Python,Machine Learning Engineer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0027,Machine Learning,Machine Learning Engineer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0028,Pandas,Machine Learning Engineer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0029,Scikit-learn,Machine Learning Engineer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0030,TensorFlow,Machine Learning Engineer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0031,SQL,Machine Learning Engineer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0032,Manual Testing,QA Engineer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0033,SQL,QA Engineer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0034,Test Cases,QA Engineer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0035,Selenium,QA Engineer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0036,Python,QA Engineer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0037,API Testing,QA Engineer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0038,JavaScript,Full Stack Developer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0039,React,Full Stack Developer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0040,Node.js,Full Stack Developer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0041,SQL,Full Stack Developer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0042,Express,Full Stack Developer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0043,Git,Full Stack Developer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0044,Python,Data Engineer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0045,SQL,Data Engineer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0046,ETL,Data Engineer,core,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0047,Airflow,Data Engineer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0048,Spark,Data Engineer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET
+SK0049,Cloud,Data Engineer,additional,Prototype taxonomy informed by role descriptions; replace/enrich with O*NET

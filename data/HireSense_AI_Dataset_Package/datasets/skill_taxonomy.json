@@ -1,0 +1,345 @@
+[
+  {
+    "skill_id":"SK0001",
+    "skill_name":"Python",
+    "occupation":"Python Developer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0002",
+    "skill_name":"SQL",
+    "occupation":"Python Developer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0003",
+    "skill_name":"Flask",
+    "occupation":"Python Developer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0004",
+    "skill_name":"FastAPI",
+    "occupation":"Python Developer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0005",
+    "skill_name":"Pandas",
+    "occupation":"Python Developer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0006",
+    "skill_name":"Git",
+    "occupation":"Python Developer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0007",
+    "skill_name":"Java",
+    "occupation":"Java Developer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0008",
+    "skill_name":"SQL",
+    "occupation":"Java Developer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0009",
+    "skill_name":"Spring Boot",
+    "occupation":"Java Developer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0010",
+    "skill_name":"REST API",
+    "occupation":"Java Developer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0011",
+    "skill_name":"Git",
+    "occupation":"Java Developer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0012",
+    "skill_name":"Docker",
+    "occupation":"Java Developer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0013",
+    "skill_name":"HTML",
+    "occupation":"Frontend Developer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0014",
+    "skill_name":"CSS",
+    "occupation":"Frontend Developer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0015",
+    "skill_name":"JavaScript",
+    "occupation":"Frontend Developer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0016",
+    "skill_name":"React",
+    "occupation":"Frontend Developer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0017",
+    "skill_name":"TypeScript",
+    "occupation":"Frontend Developer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0018",
+    "skill_name":"Tailwind CSS",
+    "occupation":"Frontend Developer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0019",
+    "skill_name":"Git",
+    "occupation":"Frontend Developer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0020",
+    "skill_name":"SQL",
+    "occupation":"Data Analyst",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0021",
+    "skill_name":"Excel",
+    "occupation":"Data Analyst",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0022",
+    "skill_name":"Python",
+    "occupation":"Data Analyst",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0023",
+    "skill_name":"Power BI",
+    "occupation":"Data Analyst",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0024",
+    "skill_name":"Tableau",
+    "occupation":"Data Analyst",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0025",
+    "skill_name":"Pandas",
+    "occupation":"Data Analyst",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0026",
+    "skill_name":"Python",
+    "occupation":"Machine Learning Engineer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0027",
+    "skill_name":"Machine Learning",
+    "occupation":"Machine Learning Engineer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0028",
+    "skill_name":"Pandas",
+    "occupation":"Machine Learning Engineer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0029",
+    "skill_name":"Scikit-learn",
+    "occupation":"Machine Learning Engineer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0030",
+    "skill_name":"TensorFlow",
+    "occupation":"Machine Learning Engineer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0031",
+    "skill_name":"SQL",
+    "occupation":"Machine Learning Engineer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0032",
+    "skill_name":"Manual Testing",
+    "occupation":"QA Engineer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0033",
+    "skill_name":"SQL",
+    "occupation":"QA Engineer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0034",
+    "skill_name":"Test Cases",
+    "occupation":"QA Engineer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0035",
+    "skill_name":"Selenium",
+    "occupation":"QA Engineer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0036",
+    "skill_name":"Python",
+    "occupation":"QA Engineer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0037",
+    "skill_name":"API Testing",
+    "occupation":"QA Engineer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0038",
+    "skill_name":"JavaScript",
+    "occupation":"Full Stack Developer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0039",
+    "skill_name":"React",
+    "occupation":"Full Stack Developer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0040",
+    "skill_name":"Node.js",
+    "occupation":"Full Stack Developer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0041",
+    "skill_name":"SQL",
+    "occupation":"Full Stack Developer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0042",
+    "skill_name":"Express",
+    "occupation":"Full Stack Developer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0043",
+    "skill_name":"Git",
+    "occupation":"Full Stack Developer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0044",
+    "skill_name":"Python",
+    "occupation":"Data Engineer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0045",
+    "skill_name":"SQL",
+    "occupation":"Data Engineer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0046",
+    "skill_name":"ETL",
+    "occupation":"Data Engineer",
+    "skill_type":"core",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0047",
+    "skill_name":"Airflow",
+    "occupation":"Data Engineer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0048",
+    "skill_name":"Spark",
+    "occupation":"Data Engineer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  },
+  {
+    "skill_id":"SK0049",
+    "skill_name":"Cloud",
+    "occupation":"Data Engineer",
+    "skill_type":"additional",
+    "source":"Prototype taxonomy informed by role descriptions; replace\/enrich with O*NET"
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-10-30T10:51:47",
+  "seed": 42,
+  "candidate_count": 500,
+  "public_resume_count": 0,
+  "synthetic_pdf_count": 500,
+  "checks": [
+    {
+      "check": "Unique candidate IDs",
+      "passed": true,
+      "detail": "Candidate IDs must be unique"
+    },
+    {
+      "check": "Unique job IDs",
+      "passed": true,
+      "detail": "Job IDs must be unique"
+    },
+    {
+      "check": "All preference candidate IDs valid",
+      "passed": true,
+      "detail": "Preferences reference existing candidates"
+    },
+    {
+      "check": "All application candidate IDs valid",
+      "passed": true,
+      "detail": "Applications reference existing candidates"
+    },
+    {
+      "check": "All application job IDs valid",
+      "passed": true,
+      "detail": "Applications reference existing jobs"
+    },
+    {
+      "check": "All interview candidate IDs valid",
+      "passed": true,
+      "detail": "Interviews reference existing candidates"
+    },
+    {
+      "check": "All interview slots valid",
+      "passed": true,
+      "detail": "Interviews reference existing slots"
+    },
+    {
+      "check": "No slot over capacity",
+      "passed": true,
+      "detail": "Booked count never exceeds capacity"
+    },
+    {
+      "check": "Attendance interview IDs valid",
+      "passed": true,
+      "detail": "Attendance references existing interviews"
+    },
+    {
+      "check": "Outcome interview IDs valid",
+      "passed": true,
+      "detail": "Outcomes reference existing interviews"
+    },
+    {
+      "check": "PDF resumes created",
+      "passed": true,
+      "detail": "One synthetic PDF per candidate"
+    }
+  ],
+  "all_passed": true
+}

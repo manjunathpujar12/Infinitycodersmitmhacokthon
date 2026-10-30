@@ -1,0 +1,2 @@
+resume_id,resume_text,category,skills,source_dataset,source_record_id,license_reviewed
+PUB00001,"Example public resume text only",Information-Technology,"Python;SQL",dataset_name,record_1,false
