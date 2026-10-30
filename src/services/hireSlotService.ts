@@ -4,6 +4,8 @@ import {
   JobAllocation,
   AlternativeCityOffer,
   AllocationAuditLog,
+  CallerRole,
+  CandidateAllocation,
 } from '../types/allocation';
 import { WaitlistEntry } from '../types/waitlist';
 import { evaluateCandidateRoleMatch } from '../engine/matchingEngine';
@@ -14,6 +16,7 @@ import { calculateAvailableCapacity, determineVacancyStatus } from '../engine/va
 import { createAuditLogEntry, queryAuditLogs } from '../engine/auditLogger';
 import { calculateHaversineDistanceKm, getNearestAvailableCities } from '../lib/haversine';
 import { supabase, isRealSupabaseConfigured } from '../lib/supabaseClient';
+import { realtimeAllocationService } from './realtimeAllocationService';
 
 export interface SeedDataset {
   jobs: JobRole[];
@@ -280,6 +283,18 @@ export class HireSlotService {
   }
 
   // --- QUERY APIS ---
+  public getCandidateAllocation(candidateId: string, jobId?: string): JobAllocation | undefined {
+    return this.allocations.find(
+      (a) => a.candidateId === candidateId && (!jobId || a.jobId === jobId)
+    );
+  }
+
+  public getCandidateOffer(candidateId: string, jobId?: string): AlternativeCityOffer | undefined {
+    return this.alternativeOffers.find(
+      (o) => o.candidateId === candidateId && (!jobId || o.jobId === jobId) && o.status === 'PENDING'
+    );
+  }
+
   public getJobs(): JobRole[] {
     return [...this.jobs];
   }
@@ -394,6 +409,7 @@ export class HireSlotService {
       // 2. Add allocation if created
       if (result.allocation) {
         this.allocations.push(result.allocation);
+        realtimeAllocationService.publishAllocationUpdate(result.allocation);
       }
 
       // 3. Add alternative offer if generated
@@ -414,15 +430,35 @@ export class HireSlotService {
   }
 
   // --- ALTERNATIVE CITY OFFER ACCEPT/REJECT WORKFLOW ---
-  public respondToAlternativeCityOffer(
+  public async respondToAlternativeCityOffer(
     allocationId: string,
     candidateId: string,
     accepted: boolean,
-    candidateReason?: string
-  ): { success: boolean; message: string; allocation?: JobAllocation } {
+    candidateReason?: string,
+    callerRole: CallerRole = 'CANDIDATE'
+  ): Promise<{ success: boolean; message: string; allocation?: JobAllocation }> {
+    // STRICT SECURITY INVARIANT: Do not allow HR to simulate candidate consent!
+    if (callerRole === 'HR_ADMIN') {
+      return {
+        success: false,
+        message:
+          'Forbidden: HR is not permitted to simulate candidate consent. In accordance with HireSlot business rules, the candidate must accept or decline the alternative city offer themselves via the Candidate Portal.',
+      };
+    }
+
     const allocationIndex = this.allocations.findIndex((a) => a.id === allocationId);
     if (allocationIndex === -1) {
       return { success: false, message: `Allocation ${allocationId} not found` };
+    }
+
+    const allocation = this.allocations[allocationIndex];
+
+    // Verify candidate identity matches allocation
+    if (allocation.candidateId !== candidateId) {
+      return {
+        success: false,
+        message: 'Forbidden: Authenticated candidate ID does not match this allocation offer.',
+      };
     }
 
     const offerIndex = this.alternativeOffers.findIndex(
@@ -432,7 +468,6 @@ export class HireSlotService {
       return { success: false, message: `No active alternative offer found for allocation ${allocationId}` };
     }
 
-    const allocation = this.allocations[allocationIndex];
     const offer = this.alternativeOffers[offerIndex];
 
     const decisionResult = handleCandidateAlternativeOfferResponse(
@@ -442,7 +477,7 @@ export class HireSlotService {
       candidateReason
     );
 
-    // Update state
+    // Update memory state
     this.allocations[allocationIndex] = decisionResult.allocation;
     this.alternativeOffers[offerIndex] = decisionResult.offer;
 
@@ -514,6 +549,33 @@ export class HireSlotService {
     });
     this.auditLogs.unshift(auditLog);
 
+    // Sync to Supabase candidate_allocations table if configured
+    if (isRealSupabaseConfigured) {
+      try {
+        await (supabase as any).rpc('respond_to_alternative_city_offer', {
+          p_allocation_id: allocationId,
+          p_candidate_id: candidateId,
+          p_accepted: accepted,
+        });
+      } catch {
+        // Direct table update fallback on candidate_allocations
+        await (supabase.from('candidate_allocations') as any)
+          .update({
+            status: decisionResult.allocation.status,
+            allocated_city_id: accepted ? offer.offeredCityId : null,
+            allocatedCityId: accepted ? offer.offeredCityId : null,
+            allocated_at: accepted ? new Date().toISOString() : null,
+            allocatedAt: accepted ? new Date().toISOString() : null,
+            updated_at: new Date().toISOString(),
+            updatedAt: new Date().toISOString(),
+          })
+          .eq('id', allocationId);
+      }
+    }
+
+    // Broadcast Realtime update to candidate-filtered channel and HR Dashboard
+    realtimeAllocationService.publishAllocationUpdate(decisionResult.allocation);
+
     return {
       success: true,
       message: decisionResult.message,
@@ -568,6 +630,8 @@ export class HireSlotService {
       reason,
     });
     this.auditLogs.unshift(auditLog);
+
+    realtimeAllocationService.publishAllocationUpdate(this.allocations[idx]);
 
     return { success: true, message: `Allocation released successfully. Vacancy updated.` };
   }

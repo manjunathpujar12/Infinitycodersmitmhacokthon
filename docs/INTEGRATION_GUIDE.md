@@ -21,6 +21,8 @@ The platform is designed with clear domain boundaries:
 | :--- | :--- |
 | **Never assign to a full city** | `isCityAvailableForAllocation()` and PostgreSQL `chk_capacity_overflow` + `allocate_candidate_transactional` block allocation if `(allocated + reserved) >= totalCapacity`. |
 | **Prevent duplicate allocations** | `UNIQUE(candidate_id, job_id)` constraint in PostgreSQL schema + engine check blocks multiple active allocations for the same candidate and job. |
+| **Candidate Consent Invariant** | HR is strictly prohibited from simulating candidate consent. Only the candidate can accept or decline alternative city offers through the Candidate Portal. |
+| **Realtime Sync Across Portals** | Supabase Realtime pub-sub on `candidate_allocations` filtered to `candidate_id=eq.${candidateId}` for candidate, and table-wide for HR. |
 | **Transactional concurrency** | PostgreSQL stored procedure uses `SELECT ... FOR UPDATE` row-level lock on the target city vacancy row, ensuring ACID isolation. |
 | **No auto-rejection by AI/Interview score** | Interview scores and AI ratings are purely informational metadata and cannot trigger automated hard disqualification. |
 | **Interview domain separation** | Interview booking (`interview_slots`) is an independent domain table and service with zero hard dependencies on location allocation. |

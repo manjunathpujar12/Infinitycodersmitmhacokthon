@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { VacancyTrackerView } from './components/VacancyTrackerView';
 import { RoleMatchingView } from './components/RoleMatchingView';
@@ -7,7 +7,9 @@ import { OverflowRecommendationView } from './components/OverflowRecommendationV
 import { WaitlistManagerView } from './components/WaitlistManagerView';
 import { AuditHistoryView } from './components/AuditHistoryView';
 import { HrRankingConfigModal } from './components/HrRankingConfigModal';
+import { CandidatePortalView } from './components/CandidatePortalView';
 import { hireSlotService } from './services/hireSlotService';
+import { realtimeAllocationService } from './services/realtimeAllocationService';
 import { HrRankingWeights } from './types/matching';
 
 export const App: React.FC = () => {
@@ -16,8 +18,9 @@ export const App: React.FC = () => {
   const [candidates, setCandidates] = useState(hireSlotService.getCandidates());
   const [selectedJobId, setSelectedJobId] = useState<string>(jobs[0]?.id || '');
   const [selectedCandidateId, setSelectedCandidateId] = useState<string>(
-    candidates[0]?.id || ''
+    candidates[1]?.id || candidates[0]?.id || ''
   );
+  const [portalMode, setPortalMode] = useState<'HR' | 'CANDIDATE'>('HR');
   const [activeTab, setActiveTab] = useState<string>('allocation');
   const [rankingWeights, setRankingWeights] = useState<HrRankingWeights>(
     hireSlotService.getRankingWeights()
@@ -40,6 +43,9 @@ export const App: React.FC = () => {
   );
   const [auditLogs, setAuditLogs] = useState(hireSlotService.getAuditLogs());
 
+  // Count active pending offers for badge
+  const pendingOffersCount = alternativeOffers.filter((o) => o.status === 'PENDING').length;
+
   // Refresh handler after operations
   const refreshData = () => {
     setJobs(hireSlotService.getJobs());
@@ -51,6 +57,18 @@ export const App: React.FC = () => {
     setAuditLogs(hireSlotService.getAuditLogs());
     setRankingWeights(hireSlotService.getRankingWeights());
   };
+
+  // Realtime subscription for HR Dashboard to listen to candidate_allocations
+  useEffect(() => {
+    const unsubscribe = realtimeAllocationService.subscribeToHrAllocations(() => {
+      // Whenever candidate accepts/declines or status changes, sync HR view in real-time
+      refreshData();
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, [selectedJobId]);
 
   const handleSelectJob = (jobId: string) => {
     setSelectedJobId(jobId);
@@ -65,6 +83,21 @@ export const App: React.FC = () => {
     refreshData();
   };
 
+  const handleTogglePortalMode = (mode: 'HR' | 'CANDIDATE') => {
+    setPortalMode(mode);
+    if (mode === 'CANDIDATE') {
+      setActiveTab('candidate-decision');
+    } else {
+      setActiveTab('allocation');
+    }
+  };
+
+  const handleNavigateToCandidatePortal = (candidateId: string) => {
+    setSelectedCandidateId(candidateId);
+    setPortalMode('CANDIDATE');
+    setActiveTab('candidate-decision');
+  };
+
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col text-slate-900">
       {/* Navigation & Header */}
@@ -76,57 +109,82 @@ export const App: React.FC = () => {
         onOpenRankingModal={() => setIsRankingModalOpen(true)}
         activeTab={activeTab}
         onSelectTab={setActiveTab}
+        portalMode={portalMode}
+        onTogglePortalMode={handleTogglePortalMode}
+        pendingOffersCount={pendingOffersCount}
       />
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {activeTab === 'allocation' && (
-          <AllocationConsole
-            candidates={candidates}
-            job={selectedJob}
-            vacancies={vacancies}
-            allocations={allocations}
-            rankingWeights={rankingWeights}
-            onRefreshData={refreshData}
-            onNavigateToTab={setActiveTab}
-          />
-        )}
+        {portalMode === 'CANDIDATE' ? (
+          activeTab === 'candidate-matching' ? (
+            <RoleMatchingView
+              candidates={candidates}
+              selectedCandidateId={selectedCandidateId}
+              onSelectCandidate={setSelectedCandidateId}
+              job={selectedJob}
+            />
+          ) : (
+            <CandidatePortalView
+              candidates={candidates}
+              authenticatedCandidateId={selectedCandidateId}
+              onSelectCandidate={setSelectedCandidateId}
+              job={selectedJob}
+              onRefreshData={refreshData}
+            />
+          )
+        ) : (
+          <>
+            {activeTab === 'allocation' && (
+              <AllocationConsole
+                candidates={candidates}
+                job={selectedJob}
+                vacancies={vacancies}
+                allocations={allocations}
+                rankingWeights={rankingWeights}
+                onRefreshData={refreshData}
+                onNavigateToTab={setActiveTab}
+              />
+            )}
 
-        {activeTab === 'matching' && (
-          <RoleMatchingView
-            candidates={candidates}
-            selectedCandidateId={selectedCandidateId}
-            onSelectCandidate={setSelectedCandidateId}
-            job={selectedJob}
-          />
-        )}
+            {activeTab === 'matching' && (
+              <RoleMatchingView
+                candidates={candidates}
+                selectedCandidateId={selectedCandidateId}
+                onSelectCandidate={setSelectedCandidateId}
+                job={selectedJob}
+              />
+            )}
 
-        {activeTab === 'vacancies' && (
-          <VacancyTrackerView
-            vacancies={vacancies}
-            jobTitle={selectedJob.title}
-          />
-        )}
+            {activeTab === 'vacancies' && (
+              <VacancyTrackerView
+                vacancies={vacancies}
+                jobTitle={selectedJob.title}
+              />
+            )}
 
-        {activeTab === 'overflow' && (
-          <OverflowRecommendationView
-            candidates={candidates}
-            job={selectedJob}
-            vacancies={vacancies}
-            alternativeOffers={alternativeOffers}
-            allocations={allocations}
-            onRefreshData={refreshData}
-          />
-        )}
+            {activeTab === 'overflow' && (
+              <OverflowRecommendationView
+                candidates={candidates}
+                job={selectedJob}
+                vacancies={vacancies}
+                alternativeOffers={alternativeOffers}
+                allocations={allocations}
+                onRefreshData={refreshData}
+                onNavigateToCandidatePortal={handleNavigateToCandidatePortal}
+              />
+            )}
 
-        {activeTab === 'waitlist' && (
-          <WaitlistManagerView
-            waitlist={waitlist}
-            onRefreshData={refreshData}
-          />
-        )}
+            {activeTab === 'waitlist' && (
+              <WaitlistManagerView
+                waitlist={waitlist}
+                onRefreshData={refreshData}
+              />
+            )}
 
-        {activeTab === 'audit' && <AuditHistoryView logs={auditLogs} />}
+            {activeTab === 'audit' && <AuditHistoryView logs={auditLogs} />}
+          </>
+        )}
       </main>
 
       {/* Footer */}
@@ -136,7 +194,7 @@ export const App: React.FC = () => {
             HireSlot &bull; Architecture, Role Matching & Location Allocation Module
           </p>
           <p className="mt-1">
-            Built with React + Vite + TypeScript + Tailwind CSS + Supabase ACID Guarantee
+            Coordinated with Member 2 (Candidate Portal) & Member 3 (HR Dashboard) &bull; Supabase Realtime Active
           </p>
         </div>
       </footer>
@@ -153,4 +211,3 @@ export const App: React.FC = () => {
 };
 
 export default App;
-

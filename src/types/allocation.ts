@@ -55,6 +55,14 @@ export interface JobAllocation {
   updatedAt: string;
 }
 
+/**
+ * Shared candidate allocation model across Member 1, Member 2, and Member 3
+ * Corresponds to the public.candidate_allocations table in Supabase.
+ */
+export type CandidateAllocation = JobAllocation;
+
+export type CallerRole = 'CANDIDATE' | 'HR_ADMIN' | 'SYSTEM_ALLOCATOR';
+
 export interface AlternativeCityOffer {
   allocationId: string;
   candidateId: string;

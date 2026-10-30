@@ -31,6 +31,15 @@ export interface Database {
         Insert: CityVacancy;
         Update: Partial<CityVacancy>;
       };
+      candidate_allocations: {
+        Row: JobAllocation;
+        Insert: Omit<JobAllocation, 'id' | 'createdAt' | 'updatedAt'> & {
+          id?: string;
+          createdAt?: string;
+          updatedAt?: string;
+        };
+        Update: Partial<JobAllocation>;
+      };
       job_allocations: {
         Row: JobAllocation;
         Insert: Omit<JobAllocation, 'id' | 'createdAt' | 'updatedAt'> & {

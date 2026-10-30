@@ -6,16 +6,17 @@ HireSlot is an intelligent recruitment, candidate matching, and location allocat
 
 ## My Responsibility
 
-1. **Architecture & Shared Schema**: Define core TypeScript domain contracts and PostgreSQL transactional schema for the entire engineering team.
+1. **Architecture & Shared Schema**: Define core TypeScript domain contracts and PostgreSQL transactional schema (`candidate_allocations`) for the entire engineering team.
 2. **Role Matching Engine**: Explainable candidate-to-job matching based on skill proficiency, years of experience, and educational eligibility.
 3. **Skill-Gap Hints**: Granular gap analysis distinguishing mandatory missing skills from bonus skills with actionable upskilling recommendations.
 4. **City Vacancy Capacity Tracking**: Real-time multi-hub tracking (`AVAILABLE`, `LIMITED`, `FULL`) with strict overbooking prevention.
 5. **Preferred-Location-First Allocation**: Prioritizing candidate preference order with ACID transactional safety.
 6. **HR-Configurable Ranking Rules**: Customizable weights for skills, experience, location alignment, and joining date urgency, with ready presets.
 7. **Haversine Distance Proximity Recommendations**: Great-circle geographic proximity ranking ($R = 6371\text{ km}$) for overflow management when preferred cities are full.
-8. **Alternative City Workflow**: 48-hour temporary seat reservation holds with candidate acceptance and rejection workflows.
+8. **Alternative City Workflow & Candidate Consent**: 48-hour temporary seat reservation holds with independent candidate acceptance and rejection workflows. **HR cannot simulate candidate consent**.
 9. **Future-Date & Location Waitlist**: Priority queue management factoring match scores, joining readiness, and FIFO tie-breakers.
 10. **Immutable Allocation Audit Trail**: Detailed audit logging capturing state transitions, actors, and decision factors.
+11. **Realtime Multi-Portal Synchronization**: Live Supabase Realtime subscriptions on the shared `candidate_allocations` table syncing HR Dashboard (Member 3) and Candidate Portal (Member 2).
 
 ---
 
@@ -23,6 +24,8 @@ HireSlot is an intelligent recruitment, candidate matching, and location allocat
 
 - **Never assign to a full city**: Both database CHECK constraints and application logic strictly block allocating any candidate to a city with 0 available seats.
 - **Prevent duplicate allocations**: A candidate can never have duplicate active allocations for the same job (`UNIQUE(candidate_id, job_id)`).
+- **Candidate Consent Protected**: HR is strictly prohibited from simulating candidate consent. Only the candidate can accept or decline alternative city offers through the Candidate Portal.
+- **Realtime Portal Synchronization**: Live Supabase Realtime subscriptions on the shared `candidate_allocations` table (`filter: candidate_id=eq.${candidateId}`) sync state between HR Dashboard (Member 3) and Candidate Portal (Member 2).
 - **Concurrency & Transactional Safety**: Allocation RPC procedures use `SELECT ... FOR UPDATE` row-level locks on city vacancy records to prevent race conditions during high-concurrency requests.
 - **No AI Auto-Rejection**: Interview and AI scores are strictly evaluative metadata and never trigger automated candidate disqualification.
 - **Interview Domain Separation**: Interview bookings (`interview_slots`) are decoupled into an independent service and table.
@@ -33,7 +36,7 @@ HireSlot is an intelligent recruitment, candidate matching, and location allocat
 ## Tech Stack
 
 - **Frontend**: React 19, TypeScript, Vite, Tailwind CSS, Lucide React
-- **Backend / DB**: Supabase (PostgreSQL with ACID Stored Procedures)
+- **Backend / DB**: Supabase (PostgreSQL with ACID Stored Procedures & Realtime)
 - **Testing**: Vitest (Unit & Integration tests)
 
 ---
@@ -42,7 +45,8 @@ HireSlot is an intelligent recruitment, candidate matching, and location allocat
 
 ```
 ├── docs/
-│   └── INTEGRATION_GUIDE.md        # Complete integration instructions for teammates
+│   ├── INTEGRATION_GUIDE.md        # Complete integration instructions for teammates
+│   └── MEMBER_3_COORDINATION.md    # Urgent coordination protocol for HR Dashboard
 ├── src/
 │   ├── types/                     # Shared TypeScript contracts & domain models
 │   │   ├── matching.ts            # Roles, candidate profiles, skill requirements
@@ -65,13 +69,15 @@ HireSlot is an intelligent recruitment, candidate matching, and location allocat
 │   │   └── utils.ts               # Date and formatting utilities
 │   ├── services/
 │   │   ├── hireSlotService.ts     # Unified orchestrator integrating all modules
+│   │   ├── realtimeAllocationService.ts # Supabase Realtime pub-sub manager
 │   │   └── interviewService.ts    # Independent interview booking service
 │   ├── components/                # Interactive UI Showcase & Dashboards
-│   │   ├── Navbar.tsx             # Header, role selector & HR presets trigger
+│   │   ├── Navbar.tsx             # Header, portal switcher (HR / Candidate)
+│   │   ├── CandidatePortalView.tsx # Candidate Portal for independent offer decision
 │   │   ├── AllocationConsole.tsx  # Core transactional allocation console
 │   │   ├── RoleMatchingView.tsx   # Skill match & actionable gap hints
 │   │   ├── VacancyTrackerView.tsx # City vacancy matrix with status badges
-│   │   ├── OverflowRecommendationView.tsx # Haversine overflow & candidate decision portal
+│   │   ├── OverflowRecommendationView.tsx # Haversine overflow & live HR monitor
 │   │   ├── WaitlistManagerView.tsx # Future-date & location waitlist queue
 │   │   ├── AuditHistoryView.tsx   # Immutable audit trail
 │   │   └── HrRankingConfigModal.tsx # HR custom weight sliders
@@ -79,14 +85,16 @@ HireSlot is an intelligent recruitment, candidate matching, and location allocat
 │   └── main.tsx
 ├── supabase/
 │   └── migrations/
-│       └── 001_hireslot_schema.sql # PostgreSQL schema, constraints, indexes & ACID RPCs
-└── tests/                         # Vitest Test Suite (20 passed tests)
+│       ├── 001_hireslot_schema.sql # Initial PostgreSQL schema, constraints, indexes & ACID RPCs
+│       └── 002_candidate_allocations_realtime.sql # Shared candidate_allocations table & Realtime publication
+└── tests/                         # Vitest Test Suite (26 passed tests)
     ├── matchingEngine.test.ts
     ├── haversine.test.ts
     ├── allocationEngine.test.ts
     ├── alternativeOffer.test.ts
     ├── waitlist.test.ts
-    └── rankingRules.test.ts
+    ├── rankingRules.test.ts
+    └── candidateOfferRealtime.test.ts
 ```
 
 ---
