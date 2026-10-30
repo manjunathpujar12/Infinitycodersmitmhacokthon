@@ -1,0 +1,37 @@
+{
+  "name": "hireslot-backend",
+  "version": "1.0.0",
+  "description": "HireSlot Backend: Supabase PostgreSQL schema, RLS policies, atomic concurrency RPCs, travel & relocation claims, and test suite",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node --test dist/tests/**/*.test.js",
+    "test:concurrency": "tsc && node --test dist/tests/concurrency/*.test.js",
+    "test:security": "tsc && node --test dist/tests/security/*.test.js",
+    "test:all": "tsc && node --test dist/tests/**/*.test.js",
+    "typecheck": "tsc --noEmit",
+    "import:hiresense": "tsc && node dist/scripts/importer/hiresenseDataImporter.js",
+    "import:hiresense:dry-run": "tsc && node dist/scripts/importer/hiresenseDataImporter.js --dry-run",
+    "import:hiresense:skip-storage": "tsc && node dist/scripts/importer/hiresenseDataImporter.js --skip-storage",
+    "import:hiresense:verify": "tsc && node dist/scripts/importer/hiresenseDataImporter.js --verify-only"
+  },
+  "keywords": [
+    "supabase",
+    "postgresql",
+    "rls",
+    "concurrency",
+    "interview-scheduling",
+    "travel-claims",
+    "relocation"
+  ],
+  "author": "InfinityCoders",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "typescript": "^5.7.3"
+  }
+}
