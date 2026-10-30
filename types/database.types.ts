@@ -1408,3 +1408,29 @@ export const Constants = {
     },
   },
 } as const
+
+
+// Named aliases retained for service-layer readability. These are derived from
+// the generated schema so RPC argument and return types stay in sync with Supabase.
+type RpcContract<Name extends keyof Database["public"]["Functions"]> =
+  Database["public"]["Functions"][Name];
+
+export type BookInterviewSlotRpc = RpcContract<"book_interview_slot">;
+export type AllocateCityVacancyRpc = RpcContract<"allocate_city_vacancy">;
+export type AllocateCandidateRpc = RpcContract<"allocate_candidate">;
+export type FastFillSlotRpc = RpcContract<"fast_fill_slot">;
+export type JoinInterviewWaitlistRpc = RpcContract<"join_interview_waitlist">;
+export type OfferSlotToNextWaitlistedRpc = RpcContract<"offer_slot_to_next_waitlisted">;
+export type ClaimTimedSlotOfferRpc = RpcContract<"claim_timed_slot_offer">;
+export type MarkInterviewAttendanceRpc = RpcContract<"mark_interview_attendance">;
+export type SubmitAbsenceCaseRpc = RpcContract<"submit_absence_case">;
+export type ReviewAbsenceCaseRpc = RpcContract<"review_absence_case">;
+export type SubmitExpenseClaimRpc = RpcContract<"submit_expense_claim">;
+export type ReviewExpenseClaimRpc = RpcContract<"review_expense_claim">;
+export type RecordClaimPayoutRpc = RpcContract<"record_claim_payout">;
+export type ProcessPayrollBatchRpc = RpcContract<"process_payroll_batch">;
+
+export type AttendanceStatus = Database["public"]["Enums"]["attendance_status"];
+export type AbsenceCaseStatus = Database["public"]["Enums"]["absence_case_status"];
+export type ClaimCategory = Database["public"]["Enums"]["claim_category"];
+export type ReimbursementMethod = Database["public"]["Enums"]["reimbursement_method"];
