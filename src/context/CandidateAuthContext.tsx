@@ -124,16 +124,10 @@ const CandidateAuthContext = createContext<CandidateAuthContextType | undefined>
 export const CandidateAuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   // Auth state
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() =>
-    LocalSync.get<boolean>('is_auth', true) // Default logged in as demo candidate for instant preview
+    false
   );
 
-  const [authUser, setAuthUser] = useState<{ id: string; email: string; name: string } | null>(() =>
-    LocalSync.get('auth_user', {
-      id: 'usr-auth-priya',
-      email: 'priya.sundaram@outlook.com',
-      name: 'Priya Sundaram'
-    })
-  );
+  const [authUser, setAuthUser] = useState<{ id: string; email: string; name: string } | null>(null);
 
   // Candidate Profile State
   const [candidate, setCandidate] = useState<CandidateProfile>(() =>
@@ -186,9 +180,6 @@ export const CandidateAuthProvider: React.FC<{ children: ReactNode }> = ({ child
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
 
   // Persistent storage synchronizations
-  useEffect(() => { LocalSync.set('is_auth', isAuthenticated); }, [isAuthenticated]);
-  useEffect(() => { LocalSync.set('auth_user', authUser); }, [authUser]);
-  useEffect(() => { LocalSync.set('profile', candidate); }, [candidate]);
   useEffect(() => { LocalSync.set('alt_offer', alternativeOffer); }, [alternativeOffer]);
   useEffect(() => { LocalSync.set('slots', slots); }, [slots]);
   useEffect(() => { LocalSync.set('is_waitlisted', isWaitlisted); }, [isWaitlisted]);
@@ -197,6 +188,57 @@ export const CandidateAuthProvider: React.FC<{ children: ReactNode }> = ({ child
   useEffect(() => { LocalSync.set('absence_appeal', absenceAppeal); }, [absenceAppeal]);
   useEffect(() => { LocalSync.set('travel_claims', travelClaims); }, [travelClaims]);
   useEffect(() => { LocalSync.set('relocation_claim', relocationClaim); }, [relocationClaim]);
+
+  // Restore and observe the real Supabase Auth session. No demo identity is created.
+  useEffect(() => {
+    let active = true;
+    const client = getSupabaseClient();
+    const applyUser = async (user: any) => {
+      if (!active) return;
+      if (!user) {
+        setIsAuthenticated(false);
+        setAuthUser(null);
+        return;
+      }
+      setIsAuthenticated(true);
+      setAuthUser({
+        id: user.id,
+        email: user.email ?? '',
+        name: user.user_metadata?.full_name ?? user.email ?? 'Candidate',
+      });
+      const { data, error } = await client.from('profiles')
+        .select('id, email, full_name, phone, avatar_url, metadata')
+        .eq('id', user.id)
+        .maybeSingle();
+      if (!active) return;
+      if (error) {
+        console.error('Unable to load candidate profile:', error.message);
+        return;
+      }
+      const saved = data?.metadata?.candidate;
+      setCandidate({
+        ...INITIAL_CANDIDATE,
+        ...(saved && typeof saved === 'object' ? saved : {}),
+        id: user.id,
+        userId: user.id,
+        email: data?.email ?? user.email ?? '',
+        fullName: data?.full_name ?? user.user_metadata?.full_name ?? '',
+        phone: data?.phone ?? '',
+        avatarUrl: data?.avatar_url ?? undefined,
+      });
+    };
+    void client.auth.getSession().then(({ data, error }) => {
+      if (error) console.error('Session restore failed:', error.message);
+      return applyUser(data.session?.user ?? null);
+    });
+    const { data: { subscription } } = client.auth.onAuthStateChange((_event, session) => {
+      void applyUser(session?.user ?? null);
+    });
+    return () => {
+      active = false;
+      subscription.unsubscribe();
+    };
+  }, []);
 
   // Toast Helpers
   const showToast = (type: ToastMessage['type'], title: string, message: string) => {
@@ -224,26 +266,14 @@ export const CandidateAuthProvider: React.FC<{ children: ReactNode }> = ({ child
   const login = async (email: string, pass: string): Promise<{ success: boolean; message: string }> => {
     setLoading(true);
     try {
-      // In production with live Supabase:
-      // const client = getSupabaseClient();
-      // const { data, error } = await client.auth.signInWithPassword({ email, password: pass });
-      // if (error) throw error;
-
-      // Authenticate candidate session
-      setIsAuthenticated(true);
-      const user = {
-        id: candidate.userId,
-        email: email || candidate.email,
-        name: candidate.fullName
-      };
-      setAuthUser(user);
-      setCandidate((prev) => ({ ...prev, email: email || prev.email }));
-
-      showToast('success', 'Welcome Back', `Logged in as ${candidate.fullName}.`);
-      return { success: true, message: 'Logged in successfully.' };
+      const client = getSupabaseClient();
+      const { error } = await client.auth.signInWithPassword({ email: email.trim(), password: pass });
+      if (error) throw error;
+      return { success: true, message: 'Signed in successfully.' };
     } catch (err: any) {
-      showToast('error', 'Login Failed', err.message || 'Invalid credentials.');
-      return { success: false, message: err.message };
+      const message = err?.message || 'Unable to sign in. Check your credentials and Supabase configuration.';
+      showToast('error', 'Login Failed', message);
+      return { success: false, message };
     } finally {
       setLoading(false);
     }
@@ -252,41 +282,56 @@ export const CandidateAuthProvider: React.FC<{ children: ReactNode }> = ({ child
   const register = async (fullName: string, email: string, pass: string): Promise<{ success: boolean; message: string }> => {
     setLoading(true);
     try {
-      setIsAuthenticated(true);
-      const newUserId = `usr-${Date.now()}`;
-      setAuthUser({ id: newUserId, email, name: fullName });
-      setCandidate((prev) => ({
-        ...prev,
-        fullName,
-        email,
-        userId: newUserId,
-        createdAt: new Date().toISOString()
-      }));
-
-      showToast('success', 'Account Registered', `Welcome to HireSlot, ${fullName}!`);
-      return { success: true, message: 'Registered successfully.' };
+      const client = getSupabaseClient();
+      const { data, error } = await client.auth.signUp({
+        email: email.trim(),
+        password: pass,
+        options: { data: { full_name: fullName.trim(), role: 'candidate' } },
+      });
+      if (error) throw error;
+      if (!data.session) {
+        return { success: true, message: 'Registration received. Check your email to confirm your account, then sign in.' };
+      }
+      return { success: true, message: 'Account created and signed in.' };
     } catch (err: any) {
-      showToast('error', 'Registration Failed', err.message);
-      return { success: false, message: err.message };
+      const message = err?.message || 'Unable to register this account.';
+      showToast('error', 'Registration Failed', message);
+      return { success: false, message };
     } finally {
       setLoading(false);
     }
   };
 
   const logout = () => {
-    setIsAuthenticated(false);
-    setAuthUser(null);
-    showToast('info', 'Logged Out', 'You have been safely signed out.');
+    void getSupabaseClient().auth.signOut().then(({ error }) => {
+      if (error) showToast('error', 'Sign Out Failed', error.message);
+      else showToast('info', 'Logged Out', 'You have been safely signed out.');
+    });
   };
 
   // Profile Mutations
   const updateProfile = (updates: Partial<CandidateProfile>) => {
-    setCandidate((prev) => ({
-      ...prev,
-      ...updates,
-      updatedAt: new Date().toISOString()
-    }));
-    showToast('success', 'Profile Updated', 'Personal information saved.');
+    const next = { ...candidate, ...updates, updatedAt: new Date().toISOString() };
+    setCandidate(next);
+    void (async () => {
+      try {
+        const client = getSupabaseClient();
+        const { data: { user }, error: userError } = await client.auth.getUser();
+        if (userError || !user) throw userError || new Error('Your session has expired. Please sign in again.');
+        const { error } = await client.from('profiles').update({
+          full_name: next.fullName,
+          email: user.email ?? next.email,
+          phone: next.phone || null,
+          avatar_url: next.avatarUrl || null,
+          metadata: { candidate: next },
+          updated_at: new Date().toISOString(),
+        }).eq('id', user.id);
+        if (error) throw error;
+        showToast('success', 'Profile Updated', 'Your profile was saved to your account.');
+      } catch (err: any) {
+        showToast('error', 'Save Failed', err?.message || 'Could not save your profile.');
+      }
+    })();
   };
 
   const updateSkills = (skills: CandidateSkill[]) => {
@@ -550,8 +595,7 @@ export const CandidateAuthProvider: React.FC<{ children: ReactNode }> = ({ child
     setTravelClaims(SEED_TRAVEL_CLAIMS);
     setRelocationClaim(SEED_RELOCATION_CLAIM);
     setIsWaitlisted(false);
-    setIsAuthenticated(true);
-    showToast('info', 'Reset to Seed Data', 'Candidate portal re-seeded with demo records.');
+    showToast('info', 'Demo Data Reset', 'Local preview data was reset. Sign in to access your account.');
   };
 
   return (
