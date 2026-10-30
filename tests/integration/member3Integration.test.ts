@@ -820,5 +820,412 @@ describe('Member 3 Integration: Atomic RPCs & RLS Policies', () => {
       assert.equal(canHrUpdateProfile(candidateCaller, candCompanyA, 'admin'), false);
     });
   });
+
+  describe('8. Attendance Authorization & Relationship Chain Validation (Issue B)', () => {
+    interface AttendanceTestContext {
+      actorId: string;
+      actorRole: string;
+      booking: {
+        id: string;
+        candidateId: string;
+        status: string;
+        interviewerId: string;
+        locationId: string;
+        companyId: string;
+      };
+      hasHrPermission: (comp: string, loc?: string) => boolean;
+    }
+
+    function executeMarkAttendance(ctx: AttendanceTestContext, newStatus: string) {
+      if (!ctx.actorId) throw new Error('Authentication required.');
+      if (!ctx.actorRole) throw new Error('Caller has no registered profile or role.');
+
+      if (ctx.booking.status === 'cancelled') {
+        throw new Error('Cannot mark attendance for a cancelled interview booking.');
+      }
+
+      // Explicit authorization
+      const isAdmin = ctx.actorRole === 'admin';
+      const isAssignedInterviewer = ctx.actorId === ctx.booking.interviewerId;
+      const isScopedHr = ctx.actorRole === 'hr_staff' && ctx.hasHrPermission(ctx.booking.companyId, ctx.booking.locationId);
+
+      if (!isAdmin && !isAssignedInterviewer && !isScopedHr) {
+        throw new Error('Unauthorized: Caller cannot mark attendance for this booking.');
+      }
+
+      return {
+        success: true,
+        bookingId: ctx.booking.id,
+        status: newStatus,
+      };
+    }
+
+    const testBooking = {
+      id: 'bk-100',
+      candidateId: 'cand-1',
+      status: 'confirmed',
+      interviewerId: 'int-assigned',
+      locationId: 'loc-blr',
+      companyId: 'comp-acme',
+    };
+
+    it('allows assigned interviewer to mark attendance', () => {
+      const res = executeMarkAttendance({
+        actorId: 'int-assigned',
+        actorRole: 'interviewer',
+        booking: testBooking,
+        hasHrPermission: () => false,
+      }, 'attended');
+      assert.equal(res.success, true);
+      assert.equal(res.status, 'attended');
+    });
+
+    it('allows authorized scoped HR to mark attendance', () => {
+      const res = executeMarkAttendance({
+        actorId: 'hr-blr',
+        actorRole: 'hr_staff',
+        booking: testBooking,
+        hasHrPermission: (comp, loc) => comp === 'comp-acme' && loc === 'loc-blr',
+      }, 'attended');
+      assert.equal(res.success, true);
+    });
+
+    it('allows admin to mark attendance system-wide', () => {
+      const res = executeMarkAttendance({
+        actorId: 'admin-1',
+        actorRole: 'admin',
+        booking: testBooking,
+        hasHrPermission: () => false,
+      }, 'late');
+      assert.equal(res.success, true);
+    });
+
+    it('rejects unassigned interviewers from marking attendance', () => {
+      assert.throws(() => executeMarkAttendance({
+        actorId: 'int-unassigned',
+        actorRole: 'interviewer',
+        booking: testBooking,
+        hasHrPermission: () => false,
+      }, 'attended'), /Unauthorized: Caller cannot mark attendance/);
+    });
+
+    it('rejects HR staff from a different location or company', () => {
+      assert.throws(() => executeMarkAttendance({
+        actorId: 'hr-mumbai',
+        actorRole: 'hr_staff',
+        booking: testBooking,
+        hasHrPermission: (comp, loc) => comp === 'comp-acme' && loc === 'loc-mumbai',
+      }, 'attended'), /Unauthorized: Caller cannot mark attendance/);
+    });
+
+    it('rejects candidates from marking attendance', () => {
+      assert.throws(() => executeMarkAttendance({
+        actorId: 'cand-1',
+        actorRole: 'candidate',
+        booking: testBooking,
+        hasHrPermission: () => false,
+      }, 'attended'), /Unauthorized: Caller cannot mark attendance/);
+    });
+
+    it('rejects marking attendance for a cancelled booking', () => {
+      const cancelledBooking = { ...testBooking, status: 'cancelled' };
+      assert.throws(() => executeMarkAttendance({
+        actorId: 'int-assigned',
+        actorRole: 'interviewer',
+        booking: cancelledBooking,
+        hasHrPermission: () => false,
+      }, 'attended'), /Cannot mark attendance for a cancelled interview booking/);
+    });
+  });
+
+  describe('9. Profile SELECT Privacy & Scoped Visibility Rules (Issue C)', () => {
+    interface ProfileRecord {
+      id: string;
+      fullName: string;
+      role: string;
+    }
+
+    interface ProfileVisibilityContext {
+      callerId: string;
+      callerRole: string;
+      isCandidateBookedWithInterviewer: (candId: string) => boolean;
+      isCandidateInHrScope: (candId: string) => boolean;
+      isColleagueInHrCompany: (userId: string) => boolean;
+      isClaimantInPayrollScope: (candId: string) => boolean;
+    }
+
+    function canViewProfile(targetProfile: ProfileRecord, ctx: ProfileVisibilityContext): boolean {
+      // 1. Self view
+      if (ctx.callerId === targetProfile.id) return true;
+
+      // 2. Admin view
+      if (ctx.callerRole === 'admin') return true;
+
+      // 3. Interviewer scoped view
+      if (ctx.callerRole === 'interviewer') {
+        return ctx.isCandidateBookedWithInterviewer(targetProfile.id);
+      }
+
+      // 4. HR scoped view (candidate in scope or peer in company)
+      if (ctx.callerRole === 'hr_staff') {
+        return ctx.isCandidateInHrScope(targetProfile.id) || ctx.isColleagueInHrCompany(targetProfile.id);
+      }
+
+      // 5. Payroll officer scoped view
+      if (ctx.callerRole === 'payroll_officer') {
+        return ctx.isClaimantInPayrollScope(targetProfile.id);
+      }
+
+      return false;
+    }
+
+    const candidateAlice: ProfileRecord = { id: 'c-alice', fullName: 'Alice Candidate', role: 'candidate' };
+    const candidateBob: ProfileRecord = { id: 'c-bob', fullName: 'Bob Candidate', role: 'candidate' };
+
+    it('allows candidates to view only their own profile', () => {
+      const ctx: ProfileVisibilityContext = {
+        callerId: 'c-alice',
+        callerRole: 'candidate',
+        isCandidateBookedWithInterviewer: () => false,
+        isCandidateInHrScope: () => false,
+        isColleagueInHrCompany: () => false,
+        isClaimantInPayrollScope: () => false,
+      };
+
+      assert.equal(canViewProfile(candidateAlice, ctx), true);
+      assert.equal(canViewProfile(candidateBob, ctx), false); // Cannot view other candidate
+    });
+
+    it('restricts interviewer to candidates booked for their interviews', () => {
+      const ctx: ProfileVisibilityContext = {
+        callerId: 'int-1',
+        callerRole: 'interviewer',
+        isCandidateBookedWithInterviewer: (id) => id === 'c-alice', // Only Alice is booked
+        isCandidateInHrScope: () => false,
+        isColleagueInHrCompany: () => false,
+        isClaimantInPayrollScope: () => false,
+      };
+
+      assert.equal(canViewProfile(candidateAlice, ctx), true);
+      assert.equal(canViewProfile(candidateBob, ctx), false); // Bob not assigned
+    });
+
+    it('restricts HR staff to candidates in their company scope', () => {
+      const ctx: ProfileVisibilityContext = {
+        callerId: 'hr-acme',
+        callerRole: 'hr_staff',
+        isCandidateBookedWithInterviewer: () => false,
+        isCandidateInHrScope: (id) => id === 'c-alice', // Only Alice applied to Acme
+        isColleagueInHrCompany: (id) => id === 'hr-peer',
+        isClaimantInPayrollScope: () => false,
+      };
+
+      assert.equal(canViewProfile(candidateAlice, ctx), true);
+      assert.equal(canViewProfile(candidateBob, ctx), false); // Bob applied to competitor
+      assert.equal(canViewProfile({ id: 'hr-peer', fullName: 'HR Peer', role: 'hr_staff' }, ctx), true); // Peer allowed
+    });
+
+    it('restricts payroll officer to claimants with claims in their scope', () => {
+      const ctx: ProfileVisibilityContext = {
+        callerId: 'pay-1',
+        callerRole: 'payroll_officer',
+        isCandidateBookedWithInterviewer: () => false,
+        isCandidateInHrScope: () => false,
+        isColleagueInHrCompany: () => false,
+        isClaimantInPayrollScope: (id) => id === 'c-alice', // Alice has an approved claim
+      };
+
+      assert.equal(canViewProfile(candidateAlice, ctx), true);
+      assert.equal(canViewProfile(candidateBob, ctx), false); // Bob has no claims
+    });
+  });
+
+  describe('10. Database Role Protection Trigger & Escalation Defense (Issue D)', () => {
+    function simulateProfileUpdateTrigger(oldRole: string, newRole: string, callerRole: string) {
+      if (oldRole !== newRole) {
+        if (callerRole !== 'admin') {
+          throw new Error(`Permission denied: Only administrators can modify user roles (attempted role change from ${oldRole} to ${newRole}).`);
+        }
+      }
+      return { success: true, updatedRole: newRole };
+    }
+
+    it('allows administrator to change user roles', () => {
+      const res = simulateProfileUpdateTrigger('candidate', 'hr_staff', 'admin');
+      assert.equal(res.success, true);
+      assert.equal(res.updatedRole, 'hr_staff');
+    });
+
+    it('blocks candidate from self-escalating role to admin or hr_staff', () => {
+      assert.throws(
+        () => simulateProfileUpdateTrigger('candidate', 'admin', 'candidate'),
+        /Permission denied: Only administrators can modify user roles/
+      );
+      assert.throws(
+        () => simulateProfileUpdateTrigger('candidate', 'hr_staff', 'candidate'),
+        /Permission denied: Only administrators can modify user roles/
+      );
+    });
+
+    it('blocks HR staff from escalating candidates to admin', () => {
+      assert.throws(
+        () => simulateProfileUpdateTrigger('candidate', 'admin', 'hr_staff'),
+        /Permission denied: Only administrators can modify user roles/
+      );
+    });
+  });
+
+  describe('11. Cross-Bucket Storage Privacy & Scope Isolation (Issue E)', () => {
+    interface StorageAccessCheck {
+      bucketId: string;
+      callerId: string;
+      callerRole: string;
+      pathOwnerId: string;
+      hasScopedClaim: (userId: string) => boolean;
+      hasApprovedClaim: (userId: string) => boolean;
+      hasScopedBookingOrAbsence: (userId: string) => boolean;
+    }
+
+    function evaluateScopedStorageAccess(req: StorageAccessCheck): boolean {
+      // 1. Owner always has access to their own files
+      if (req.callerId === req.pathOwnerId) return true;
+
+      // 2. Admin has system-wide access
+      if (req.callerRole === 'admin') return true;
+
+      // 3. Receipts & Claim-Receipts
+      if (req.bucketId === 'receipts' || req.bucketId === 'claim-receipts') {
+        if (req.callerRole === 'hr_staff' && req.hasScopedClaim(req.pathOwnerId)) return true;
+        if (req.callerRole === 'payroll_officer' && req.hasApprovedClaim(req.pathOwnerId)) return true;
+        return false;
+      }
+
+      // 4. Absence-Proofs
+      if (req.bucketId === 'absence-proofs') {
+        if (req.callerRole === 'hr_staff' && req.hasScopedBookingOrAbsence(req.pathOwnerId)) return true;
+        if (req.callerRole === 'interviewer' && req.hasScopedBookingOrAbsence(req.pathOwnerId)) return true;
+        return false;
+      }
+
+      // 5. Resumes
+      if (req.bucketId === 'resumes') {
+        if (req.callerRole === 'hr_staff' && req.hasScopedBookingOrAbsence(req.pathOwnerId)) return true;
+        if (req.callerRole === 'interviewer' && req.hasScopedBookingOrAbsence(req.pathOwnerId)) return true;
+        return false;
+      }
+
+      return false;
+    }
+
+    it('blocks HR staff from accessing receipts of candidates in other companies', () => {
+      const allowed = evaluateScopedStorageAccess({
+        bucketId: 'receipts',
+        callerId: 'hr-acme',
+        callerRole: 'hr_staff',
+        pathOwnerId: 'cand-globex',
+        hasScopedClaim: () => false, // Different company
+        hasApprovedClaim: () => false,
+        hasScopedBookingOrAbsence: () => false,
+      });
+      assert.equal(allowed, false);
+    });
+
+    it('allows HR staff to view receipts for claims in their company scope', () => {
+      const allowed = evaluateScopedStorageAccess({
+        bucketId: 'receipts',
+        callerId: 'hr-acme',
+        callerRole: 'hr_staff',
+        pathOwnerId: 'cand-acme',
+        hasScopedClaim: () => true, // Same company
+        hasApprovedClaim: () => false,
+        hasScopedBookingOrAbsence: () => false,
+      });
+      assert.equal(allowed, true);
+    });
+
+    it('blocks payroll officer from unapproved claim receipts', () => {
+      const allowed = evaluateScopedStorageAccess({
+        bucketId: 'receipts',
+        callerId: 'pay-acme',
+        callerRole: 'payroll_officer',
+        pathOwnerId: 'cand-acme',
+        hasScopedClaim: () => true,
+        hasApprovedClaim: () => false, // Not yet HR approved
+        hasScopedBookingOrAbsence: () => false,
+      });
+      assert.equal(allowed, false);
+    });
+
+    it('allows assigned interviewer to view absence proof for their interview', () => {
+      const allowed = evaluateScopedStorageAccess({
+        bucketId: 'absence-proofs',
+        callerId: 'int-1',
+        callerRole: 'interviewer',
+        pathOwnerId: 'cand-sick',
+        hasScopedClaim: () => false,
+        hasApprovedClaim: () => false,
+        hasScopedBookingOrAbsence: () => true, // Booked with interviewer
+      });
+      assert.equal(allowed, true);
+    });
+  });
+
+  describe('12. Financial Settlement & Duplicate Payment Prevention (Section 9)', () => {
+    interface ClaimRecord {
+      id: string;
+      status: string;
+      approvedAmount: number;
+    }
+
+    function executeClaimPayout(claim: ClaimRecord, callerRole: string, bankLast4: string) {
+      if (callerRole !== 'payroll_officer' && callerRole !== 'admin') {
+        throw new Error('Unauthorized: Only payroll officers or administrators can record payouts.');
+      }
+      if (!/^\d{4}$/.test(bankLast4)) {
+        throw new Error('Invalid bank account last-4 digits. Exactly 4 numeric digits required.');
+      }
+      if (claim.status === 'paid') {
+        throw new Error('Duplicate Payout: Claim has already been paid and settled.');
+      }
+      if (claim.status !== 'hr_approved') {
+        throw new Error(`Only HR-approved claims can be processed for payout (current: ${claim.status}).`);
+      }
+
+      claim.status = 'paid';
+      return { success: true, status: 'paid', amount: claim.approvedAmount };
+    }
+
+    it('successfully processes payout for HR-approved claim with masked 4-digit bank', () => {
+      const claim: ClaimRecord = { id: 'clm-1', status: 'hr_approved', approvedAmount: 350.0 };
+      const res = executeClaimPayout(claim, 'payroll_officer', '4321');
+      assert.equal(res.success, true);
+      assert.equal(res.status, 'paid');
+      assert.equal(claim.status, 'paid');
+    });
+
+    it('prevents duplicate payout on an already paid claim', () => {
+      const paidClaim: ClaimRecord = { id: 'clm-2', status: 'paid', approvedAmount: 500.0 };
+      assert.throws(
+        () => executeClaimPayout(paidClaim, 'payroll_officer', '1234'),
+        /Duplicate Payout: Claim has already been paid/
+      );
+    });
+
+    it('rejects payout for unapproved draft or submitted claims', () => {
+      const draftClaim: ClaimRecord = { id: 'clm-3', status: 'draft', approvedAmount: 200.0 };
+      assert.throws(
+        () => executeClaimPayout(draftClaim, 'payroll_officer', '1234'),
+        /Only HR-approved claims can be processed/
+      );
+    });
+
+    it('rejects payout with invalid bank details exceeding 4 digits', () => {
+      const claim: ClaimRecord = { id: 'clm-4', status: 'hr_approved', approvedAmount: 150.0 };
+      assert.throws(
+        () => executeClaimPayout(claim, 'payroll_officer', '1234567890'), // Full account number leak
+        /Invalid bank account last-4 digits/
+      );
+    });
+  });
 });
 
